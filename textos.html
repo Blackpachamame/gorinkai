@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- Mi CSS -->
+    <link type="text/css" rel="stylesheet" href="css/estilos.css" />
+    <!-- Título -->
+    <title>Textos</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- Container wrapper -->
+        <div class="container-lg">
+            <!-- d = display | Me oculta el Navbar en dispositivos lg -->
+            <a class="navbar-brand d-lg-none" href="index.html">Go Rin Kai</a>
+            <!-- Toggle button -->
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-justify-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Nav Left -->
+                <ul class="navbar-nav justify-content-end w-100">
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-4" aria-current="page" href="karate.html">Karate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-4" href="tecnicas.html">Técnicas</a>
+                    </li>
+                </ul>
+                <!-- d = display | Me oculta el Navbar en dispositivos menores a lg -->
+                <a class="navbar-brand d-none d-lg-block px-lg-5" href="index.html">Go Rin Kai</a>
+                <!-- Nav Right -->
+                <ul class="navbar-nav justify-content-start w-100">
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-4" aria-current="page" href="textos.html">Textos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-4" href="lesiones.html">Lesiones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Ejercicios -->
+    <section class="pt-3 pt-md-5">
+        <div class="container">
+            <div class="row">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ejercicio 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="textos.html">Ejercicio 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tecnicas.html">Ejercicio 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lesiones.html">Ejercicio 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="karate.html">Ejercicio 5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="peliculas.html">Ejercicio 6</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Ejercicios -->
+
+    <!-- Section Usando Tabs -->
+    <section class="pt-3 pt-md-5 pb-3 pb-md-5">
+        <div class="container">
+            <h1>Textos</h1>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="suntzu-tab" data-bs-toggle="tab" data-bs-target="#suntzu"
+                        type="button" role="tab" aria-controls="suntzu" aria-selected="true">Sun Tzu</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="laotse-tab" data-bs-toggle="tab" data-bs-target="#laotse" type="button"
+                        role="tab" aria-controls="laotse" aria-selected="false">Lao Tse</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="miyamotomusashi-tab" data-bs-toggle="tab"
+                        data-bs-target="#miyamotomusashi" type="button" role="tab" aria-controls="miyamotomusashi"
+                        aria-selected="false">Miyamoto Musashi</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="suntzu" role="tabpanel" aria-labelledby="suntzu-tab">
+                    <div class="row border g-0 rounded shadow-sm">
+                        <div class="col p-4">
+                            <h3>El Arte de la Guerra</h3>
+                            <p>Sun Tzu fué un general chino que vivió alrededor del siglo V antes de Cristo. La
+                                colección de ensayos sobre el arte de la guerra atribuida a Sun Tzu es el tratado sobre
+                                dicho tema más antiguo que se conoce. A pesar de su antiguedad, esta obra domina sobre
+                                cualquier otra sobre el tema.</p>
+                            <p>La obra de Sun Tzu llegó por primera vez a Europa en el periodo anterior a la Revolución
+                                Francesa, en forma de una breve traducción realizada por el sacerdote jesuita J. J. M.
+                                Amiot. En las diversas traducciones que se han hecho desde entonces, se nombra
+                                ocasionalmente al autor como Sun Wu o Sun Tzi.</p>
+                            <p>El núcleo de la filosofía de Sun Tzu sobre la guerra descansa en estos dos principios:
+                            <ul>
+                                <li>Todo el Arte de la Guerra se basa en el engaño.</li>
+                                <li>El supremo Arte de la Guerra es someter al enemigo sin luchar.</li>
+                            </ul>
+                            </p>
+                            <blockquote class="blockquote">"En esencia, el Arte de la Guerra es el Arte de la Vida"
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="laotse" role="tabpanel" aria-labelledby="laotse-tab">
+                    <div class="row border g-0 rounded shadow-sm">
+                        <div class="col p-4">
+                            <h3>Tao Te Ching</h3>
+                            <p><u>Comentarios a la traducción</u>: El "Libro del Tao" es una obra filosófica muy
+                                difícil.
+                                Existen muchas traducciones de la misma a diferentes idiomas, y a veces lo que dice una
+                                traducción es completamente diferente de lo que dice otra. Considero este trabajo tan
+                                correcto como cualquier otro, ya que lo he realizado usando mis conocimientos lo mejor
+                                que he podido. Aunque de una lectura superficial se pueden sacar inconsistencias entre
+                                diversos capítulos, e incluso frases que parécen no tener sentido a primera vista, esta
+                                inconsistencia o falta de sentido es aparente y ya proviene del original. Ya he dicho
+                                que es una obra difícil y hay que meditar mucho en el sentido de cada frase, y aún así
+                                es posible no captar fácilmente el auténtico significado (en el supuesto de que exista
+                                un "auténtico" significado).</p>
+                            <p>Lamentablemente, la obra de Lao Tse parece haberse convertido en una fuente de citas
+                                lapidarias. Es muy fácil leer por encima buscando "la frase" que llama la atención, que
+                                queda muy bien para encabezar un texto o soltar en una charla, o incluso reinterpretarla
+                                de forma que apoye lo que uno quiere decir. Por supuesto, siempre es mejor estudiarlo
+                                para eso, que no estudiarlo para nada. En cualquier caso, espero que le saqueis el mejor
+                                provecho posible.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="miyamotomusashi" role="tabpanel" aria-labelledby="miyamotomusashi-tab">
+                    <div class="row border g-0 rounded shadow-sm">
+                        <div class="col p-4">
+                            <h3>El Libro de los Cinco Anillos</h3>
+                            <p>Musashi es conocido en Japón como "Kinsei", que significa algo así como "Sacerdote de la
+                                Espada". El Libro de los Cinco Anillos encabeza cualquier bibliografía sobre Kendo, y
+                                resulta único entre todos los libros sobre artes marciales, en el sentido de que trata
+                                la estrategia de guerra a gran escala exactamente de la misma forma que el combate
+                                individual. El libro no es una tesis sobre estrategia, sino, usando las palabras del
+                                propio Musashi: <em>"una guía para aquellos que desean aprender acerca de la
+                                    estretegia"</em>.
+                                Como tal guía, sus contenidos siempre están más allá de lo que los estudiantes son
+                                capaces de percibir. Cuanto más se lee el libro, más se encuentra en sus páginas. Se
+                                trata, de alguna manera, de "la última voluntad" de Musashi, la llave para abrir el
+                                sendero que el había recorrido. Al igual que otros ronin de la época, Musashi podría
+                                haber fundado una escuela cuando rondaba la treintena, siendo ya famoso y respetado, y
+                                haberse dedicado a disfrutar del éxito. Sin embargo, la opción que siguió fué la de
+                                continuar en solitario con su estudio, tal y como había hecho hasta entonces. Incluso en
+                                sus últimos años, abandonó la vida confortable que disfrutaba en el castillo de
+                                Kumamoto, y vivió dos años más en una cueva, en soledad, y dedicado a la contemplación y
+                                a escribir lo que había aprendido.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section Usando Tabs -->
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col">
+                    <div>Sitio creado con <a href="https://getbootstrap.com/">Bootstrap</a> por <a
+                            href="http://www.gorinkai.com/">Xin Chu
+                            Lin</a>.
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="float-end">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-arrow-up-circle text-white" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <!-- Footer -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
