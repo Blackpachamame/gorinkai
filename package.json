@@ -1,5 +1,24 @@
 {
+  "name": "pwa-tp1",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene una pagina web creada a partir de las consignas del trabajo práctico 1 de Programación Wen Avanzada.",
+  "main": "index.js",
   "dependencies": {
     "bootstrap": "^5.0.0-beta3"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "purgecss --css sass/custom.css --content index.html -o sass/reducido.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blackpachamame/pwa-tp1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Blackpachamame/pwa-tp1/issues"
+  },
+  "homepage": "https://github.com/Blackpachamame/pwa-tp1#readme"
 }
