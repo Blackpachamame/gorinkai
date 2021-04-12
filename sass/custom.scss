@@ -1,10 +1,9 @@
-$primary: lime;
-$secondary: lightgreen;
-$success: turquoise;
-$info: peru;
-$warning: steelblue;
-$danger: rbg(0, 0, 0);
-$dark: rgb(14, 14, 14);
+$primary: #00ff00;
+$secondary: #90ee90;
+$success: #40e0d0;
+$info: #cd853f;
+$warning: #4682b4;
+$dark: #0e0e0e;
 
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
@@ -133,7 +132,7 @@ footer a {
 }
 
 .fondo-header4 {
-  background-color: lime;
+  background-color: $primary;
 }
 
 .fondo-c1,
@@ -163,7 +162,7 @@ footer a {
 
 @media (max-width: 768px) {
   .fondo-header4 {
-    background-color: peru;
+    background-color: $info;
   }
   .fondo-c2 {
     background-color: $success;
@@ -211,32 +210,32 @@ footer a {
 /** EJERCICIO 6 **/
 .bd-gray-400 {
   color: #000;
-  background-color: $gray-400;
+  background-color: #ced4da;
 }
 
 .bd-gray-500 {
   color: #000;
-  background-color: $gray-500;
+  background-color: #adb5bd;
 }
 
 .bd-gray-600 {
   color: #fff;
-  background-color: $gray-600;
+  background-color: #6c757d;
 }
 
 .bd-gray-700 {
   color: #fff;
-  background-color: $gray-700;
+  background-color: #495057;
 }
 
 .bd-gray-800 {
   color: #fff;
-  background-color: $gray-800;
+  background-color: #343a40;
 }
 
 .bd-gray-900 {
   color: #fff;
-  background-color: $gray-900;
+  background-color: #212529;
 }
 
 .my-custom-scrollbar {
