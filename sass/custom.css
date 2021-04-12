@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
+/**** Mi CSS ****/
 body {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
@@ -12,6 +13,10 @@ a {
 
 a:hover {
   color: tomato;
+}
+
+a.nav-link {
+  color: #0e0e0e;
 }
 
 /** NAVBAR **/
@@ -35,6 +40,10 @@ a:hover {
   border-image-slice: 1;
 }
 
+.nav-pills .nav-link.active {
+  background-color: #0e0e0e;
+}
+
 /* Modifico el menu */
 .navbar-expand-lg .navbar-nav .nav-link {
   padding: 0.5rem 1rem;
@@ -42,7 +51,6 @@ a:hover {
 }
 
 /* Modifico un poco el nombre de la pagina */
-/*
 .navbar-brand {
   display: inline-block;
   padding-top: 0;
@@ -53,13 +61,15 @@ a:hover {
   font-weight: 700;
   line-height: inherit;
   white-space: nowrap;
-}*/
+}
+
 /* Le quito el borde y el padding al toggle */
-/*.navbar .navbar-toggler {
+.navbar .navbar-toggler {
   padding: 0;
   border: 0;
   color: #fff;
-}*/
+}
+
 .navbar-dark .navbar-nav .nav-link {
   color: #fff;
 }
@@ -246,7 +256,7 @@ footer a {
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #0e0e0e;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: "Fira Sans", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
@@ -4626,18 +4636,12 @@ fieldset:disabled .btn {
 }
 
 .navbar-brand {
-  padding-top: -0.0625rem;
-  padding-bottom: -0.0625rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: 1.25rem;
   text-decoration: none;
   white-space: nowrap;
-}
-
-@media (min-width: 1200px) {
-  .navbar-brand {
-    font-size: 1.75rem;
-  }
 }
 
 .navbar-nav {
@@ -4679,7 +4683,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-toggler {
-  padding: 0 0;
+  padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
