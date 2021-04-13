@@ -1,235 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
-/*----------------------------
-	       Mi CSS
-----------------------------*/
-body {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  color: tomato;
-}
-
-a.nav-link {
-  color: #0e0e0e;
-}
-
-/** NAVBAR **/
-.navbar {
-  padding: 2rem 1rem;
-  background-color: #0e0e0e;
-}
-
-/* Agrego un borde sobre el navbar */
-.navbar::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-width: 0;
-  border-bottom: 4px solid;
-  -o-border-image: linear-gradient(90deg, #9b95ff 0%, #00ffaf 25%, #fff35f 50%, #9c21ff 75%, #0056ff 100%);
-     border-image: -webkit-gradient(linear, left top, right top, from(#9b95ff), color-stop(25%, #00ffaf), color-stop(50%, #fff35f), color-stop(75%, #9c21ff), to(#0056ff));
-     border-image: linear-gradient(90deg, #9b95ff 0%, #00ffaf 25%, #fff35f 50%, #9c21ff 75%, #0056ff 100%);
-  border-image-slice: 1;
-}
-
-.nav-pills .nav-link.active {
-  background-color: #0e0e0e;
-}
-
-/* Modifico el menu */
-.navbar-expand-lg .navbar-nav .nav-link {
-  padding: 0.5rem 1rem;
-  font-size: 1.125rem;
-}
-
-/* Modifico un poco el nombre de la pagina */
-.navbar-brand {
-  display: inline-block;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-right: 0;
-  font-family: "Merienda", cursive;
-  font-size: 1.75rem;
-  font-weight: 700;
-  line-height: inherit;
-  white-space: nowrap;
-}
-
-/* Le quito el borde y el padding al toggle */
-.navbar .navbar-toggler {
-  padding: 0;
-  border: 0;
-  color: #fff;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: #fff;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-  color: #90ee90;
-}
-
-/** SECTION CITA **/
-.blockquote-footer {
-  margin-top: -0.5rem;
-  margin-bottom: -0.5rem;
-}
-
-/** FOOTER **/
-footer a {
-  color: #90ee90;
-}
-
-/** EJERCICIO 2 **/
-.nav-tabs {
-  border-bottom: 0;
-}
-
-/** EJERCICIO 4 **/
-.lesiones {
-  color: #000;
-}
-
-.lesiones p {
-  margin-bottom: 0;
-}
-
-.lesiones .display-1 {
-  font-weight: 500;
-}
-
-.lesiones .h1 {
-  margin-bottom: -3px;
-}
-
-.fondo-header4 {
-  background-color: #00ff00;
-}
-
-.fondo-c1,
-.fondo-c2,
-.fondo-c3 {
-  background-color: red;
-  height: 420px;
-}
-
-.fondo-footer4 {
-  background-color: yellow;
-}
-
-@media (max-width: 992px) {
-  .fondo-header4 {
-    background-color: #40e0d0;
-  }
-  .fondo-c3 {
-    background-color: #00ff00;
-    height: 140px;
-  }
-  .fondo-c1,
-  .fondo-c2 {
-    height: 280px;
-  }
-}
-
-@media (max-width: 768px) {
-  .fondo-header4 {
-    background-color: #cd853f;
-  }
-  .fondo-c2 {
-    background-color: #40e0d0;
-    height: 140px;
-  }
-  .fondo-c3 {
-    background-color: red;
-    height: 140px;
-  }
-  .fondo-c1 {
-    height: 140px;
-  }
-}
-
-/** EJERCICIO 5 **/
-.karate p {
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.header5 {
-  height: 10vh;
-  line-height: 10vh;
-  text-align: center;
-}
-
-.dispositivo {
-  height: 15vh;
-  line-height: 15vh;
-  text-align: center;
-}
-
-.col-number-letter {
-  height: 40vh;
-  line-height: 40vh;
-  text-align: center;
-}
-
-.caritas {
-  height: 30vh;
-  line-height: 30vh;
-  text-align: center;
-}
-
-/** EJERCICIO 6 **/
-.bd-gray-400 {
-  color: #000;
-  background-color: #ced4da;
-}
-
-.bd-gray-500 {
-  color: #000;
-  background-color: #adb5bd;
-}
-
-.bd-gray-600 {
-  color: #fff;
-  background-color: #6c757d;
-}
-
-.bd-gray-700 {
-  color: #fff;
-  background-color: #495057;
-}
-
-.bd-gray-800 {
-  color: #fff;
-  background-color: #343a40;
-}
-
-.bd-gray-900 {
-  color: #fff;
-  background-color: #212529;
-}
-
-.my-custom-scrollbar {
-  position: relative;
-  height: 600px;
-  overflow: auto;
-}
-
-.table-wrapper-scroll-y {
-  display: block;
-}
-
 /*!
  * Bootstrap v5.0.0-beta3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11688,5 +11458,235 @@ fieldset:disabled .btn {
   .d-print-none {
     display: none !important;
   }
+}
+
+/*----------------------------
+	         Mi CSS
+----------------------------*/
+body {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: tomato;
+}
+
+a.nav-link {
+  color: #0e0e0e;
+}
+
+/** NAVBAR **/
+.navbar {
+  padding: 2rem 1rem;
+  background-color: #0e0e0e;
+}
+
+/* Agrego un borde sobre el navbar */
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-width: 0;
+  border-bottom: 4px solid;
+  -o-border-image: linear-gradient(90deg, #9b95ff 0%, #00ffaf 25%, #fff35f 50%, #9c21ff 75%, #0056ff 100%);
+     border-image: -webkit-gradient(linear, left top, right top, from(#9b95ff), color-stop(25%, #00ffaf), color-stop(50%, #fff35f), color-stop(75%, #9c21ff), to(#0056ff));
+     border-image: linear-gradient(90deg, #9b95ff 0%, #00ffaf 25%, #fff35f 50%, #9c21ff 75%, #0056ff 100%);
+  border-image-slice: 1;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #0e0e0e;
+}
+
+/* Modifico el menu */
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+}
+
+/* Modifico un poco el nombre de la pagina */
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+  font-family: "Merienda", cursive;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+/* Le quito el borde y el padding al toggle */
+.navbar-dark .navbar-toggler {
+  padding: 0;
+  border: 0;
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #90ee90;
+}
+
+/** SECTION CITA **/
+.blockquote-footer {
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+/** FOOTER **/
+footer a {
+  color: #90ee90;
+}
+
+/** EJERCICIO 2 **/
+.nav-tabs {
+  border-bottom: 0;
+}
+
+/** EJERCICIO 4 **/
+.lesiones {
+  color: #000;
+}
+
+.lesiones p {
+  margin-bottom: 0;
+}
+
+.lesiones .display-1 {
+  font-weight: 500;
+}
+
+.lesiones .h1 {
+  margin-bottom: -3px;
+}
+
+.fondo-header4 {
+  background-color: #00ff00;
+}
+
+.fondo-c1,
+.fondo-c2,
+.fondo-c3 {
+  background-color: red;
+  height: 420px;
+}
+
+.fondo-footer4 {
+  background-color: yellow;
+}
+
+@media (max-width: 992px) {
+  .fondo-header4 {
+    background-color: #40e0d0;
+  }
+  .fondo-c3 {
+    background-color: #00ff00;
+    height: 140px;
+  }
+  .fondo-c1,
+  .fondo-c2 {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fondo-header4 {
+    background-color: #cd853f;
+  }
+  .fondo-c2 {
+    background-color: #40e0d0;
+    height: 140px;
+  }
+  .fondo-c3 {
+    background-color: red;
+    height: 140px;
+  }
+  .fondo-c1 {
+    height: 140px;
+  }
+}
+
+/** EJERCICIO 5 **/
+.karate p {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.header5 {
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+}
+
+.dispositivo {
+  height: 15vh;
+  line-height: 15vh;
+  text-align: center;
+}
+
+.col-number-letter {
+  height: 40vh;
+  line-height: 40vh;
+  text-align: center;
+}
+
+.caritas {
+  height: 30vh;
+  line-height: 30vh;
+  text-align: center;
+}
+
+/** EJERCICIO 6 **/
+.bd-gray-400 {
+  color: #000;
+  background-color: #ced4da;
+}
+
+.bd-gray-500 {
+  color: #000;
+  background-color: #adb5bd;
+}
+
+.bd-gray-600 {
+  color: #fff;
+  background-color: #6c757d;
+}
+
+.bd-gray-700 {
+  color: #fff;
+  background-color: #495057;
+}
+
+.bd-gray-800 {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.bd-gray-900 {
+  color: #fff;
+  background-color: #212529;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 600px;
+  overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+  display: block;
 }
 /*# sourceMappingURL=custom.css.map */

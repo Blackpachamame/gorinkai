@@ -10,8 +10,10 @@ $info: #cd853f;
 $warning: #4682b4;
 $dark: #0e0e0e;
 
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 /*----------------------------
-	       Mi CSS
+	         Mi CSS
 ----------------------------*/
 
 body {
@@ -82,7 +84,7 @@ a.nav-link {
 }
 
 /* Le quito el borde y el padding al toggle */
-.navbar .navbar-toggler {
+.navbar-dark .navbar-toggler {
   padding: 0;
   border: 0;
   color: #fff;
@@ -244,5 +246,3 @@ footer a {
 .table-wrapper-scroll-y {
   display: block;
 }
-
-@import "../node_modules/bootstrap/scss/bootstrap";
