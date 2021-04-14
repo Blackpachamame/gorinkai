@@ -1154,6 +1154,11 @@ a.nav-link {
   color: #0e0e0e;
 }
 
+/** FOOTER **/
+footer a {
+  color: #90ee90;
+}
+
 /*** EJERCICIO 4 ***/
 /* Defino los bordes */
 .bordesEj4 {
@@ -1426,11 +1431,6 @@ a.nav-link {
 .blockquote-footer {
   margin-top: -0.5rem;
   margin-bottom: -0.5rem;
-}
-
-/** FOOTER **/
-footer a {
-  color: #90ee90;
 }
 
 /** EJERCICIO 2 **/

@@ -34,6 +34,13 @@ a {
   }
 }
 
+/** FOOTER **/
+footer {
+  a {
+    color: $secondary;
+  }
+}
+
 /*** EJERCICIO 4 ***/
 
 /* Defino los bordes */
@@ -286,11 +293,6 @@ a {
 .blockquote-footer {
   margin-top: -0.5rem;
   margin-bottom: -0.5rem;
-}
-
-/** FOOTER **/
-footer a {
-  color: $secondary;
 }
 
 /** EJERCICIO 2 **/
