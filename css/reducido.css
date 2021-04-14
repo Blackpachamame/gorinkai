@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
 /*!
@@ -889,12 +890,6 @@ button:not(:disabled),
   display: block !important;
 }
 
-.d-flex {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
 .d-none {
   display: none !important;
 }
@@ -906,18 +901,6 @@ button:not(:disabled),
 
 .border {
   border: 1px solid #dee2e6 !important;
-}
-
-.border-secondary {
-  border-color: #90ee90 !important;
-}
-
-.border-white {
-  border-color: #fff !important;
-}
-
-.border-3 {
-  border-width: 3px !important;
 }
 
 .w-100 {
@@ -1075,26 +1058,6 @@ button:not(:disabled),
   .d-md-none {
     display: none !important;
   }
-  .justify-content-md-start {
-    -webkit-box-pack: start !important;
-        -ms-flex-pack: start !important;
-            justify-content: flex-start !important;
-  }
-  .justify-content-md-end {
-    -webkit-box-pack: end !important;
-        -ms-flex-pack: end !important;
-            justify-content: flex-end !important;
-  }
-  .justify-content-md-center {
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
-  }
-  .align-items-md-center {
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
-  }
   .me-md-0 {
     margin-right: 0 !important;
   }
@@ -1124,16 +1087,6 @@ button:not(:disabled),
   }
   .d-lg-none {
     display: none !important;
-  }
-  .justify-content-lg-center {
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
-  }
-  .align-items-lg-start {
-    -webkit-box-align: start !important;
-        -ms-flex-align: start !important;
-            align-items: flex-start !important;
   }
   .order-lg-1 {
     -webkit-box-ordinal-group: 2 !important;
@@ -1181,7 +1134,7 @@ button:not(:disabled),
 }
 
 /*----------------------------
-	         Mi CSS
+	          Mi SASS
 ----------------------------*/
 body {
   font-family: "Fira Sans", sans-serif;
@@ -1201,6 +1154,215 @@ a.nav-link {
   color: #0e0e0e;
 }
 
+/*** EJERCICIO 4 ***/
+/* Defino los bordes */
+.bordesEj4 {
+  border: 3px solid #0e0e0e;
+}
+
+/* Alineación vertical y horizontal de las columnas */
+.alinearCols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (max-width: 991.98px) {
+  .alinearCols {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .fondo-c1.alinearCols {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .fondo-c2.alinearCols {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .fondo-c2.alinearCols {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .fondo-c3.alinearCols {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+/* Ajustes en los textos */
+.lesiones {
+  color: #000;
+}
+
+.lesiones p {
+  margin-bottom: 0;
+}
+
+.lesiones .display-1 {
+  font-weight: 500;
+}
+
+.lesiones .h1 {
+  margin-bottom: -3px;
+}
+
+/* Defino los fondos */
+.fondo-header4 {
+  background-color: #00ff00;
+}
+
+@media (max-width: 991.98px) {
+  .fondo-header4 {
+    background-color: #40e0d0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .fondo-header4 {
+    background-color: #cd853f;
+  }
+}
+
+.fondo-c1,
+.fondo-c2,
+.fondo-c3 {
+  background-color: red;
+  height: 420px;
+}
+
+@media (max-width: 991.98px) {
+  .fondo-c1 {
+    height: 280px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .fondo-c1 {
+    height: 140px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .fondo-c2 {
+    height: 280px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .fondo-c2 {
+    background-color: #40e0d0;
+    height: 140px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .fondo-c3 {
+    background-color: #00ff00;
+    height: 140px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .fondo-c3 {
+    background-color: red;
+    height: 140px;
+  }
+}
+
+.fondo-footer4 {
+  background-color: yellow;
+}
+
+/*** EJERCICIO 5 ***/
+/* Defino los bordes */
+.bordesEj5 {
+  border: 3px solid #fff;
+}
+
+/* Defino un mixin con argumentos para establecer el alto y el centrado de cada col */
+.header5 {
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+}
+
+.dispositivo {
+  height: 15vh;
+  line-height: 15vh;
+  text-align: center;
+}
+
+.col-number-letter {
+  height: 40vh;
+  line-height: 40vh;
+  text-align: center;
+}
+
+.caritas {
+  height: 30vh;
+  line-height: 30vh;
+  text-align: center;
+}
+
+.karate p {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/*** EJERCICIO 6 ***/
+/* Defino un mixin con argumentos para establecer el alto y el centrado de cada col */
+.bd-gray-400 {
+  color: #000;
+  background-color: #ced4da;
+}
+
+.bd-gray-500 {
+  color: #000;
+  background-color: #adb5bd;
+}
+
+.bd-gray-600 {
+  color: #fff;
+  background-color: #6c757d;
+}
+
+.bd-gray-700 {
+  color: #fff;
+  background-color: #495057;
+}
+
+/* Genero un scroll en la tabla con un alto determinado */
+.my-custom-scrollbar {
+  position: relative;
+  height: 600px;
+  overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+  display: block;
+}
+
+/*----------------------------
+	          Mi CSS
+----------------------------*/
 /** NAVBAR **/
 .navbar {
   padding: 2rem 1rem;
@@ -1274,129 +1436,5 @@ footer a {
 /** EJERCICIO 2 **/
 .nav-tabs {
   border-bottom: 0;
-}
-
-/** EJERCICIO 4 **/
-.lesiones {
-  color: #000;
-}
-
-.lesiones p {
-  margin-bottom: 0;
-}
-
-.lesiones .display-1 {
-  font-weight: 500;
-}
-
-.lesiones .h1 {
-  margin-bottom: -3px;
-}
-
-.fondo-header4 {
-  background-color: #00ff00;
-}
-
-.fondo-c1,
-.fondo-c2,
-.fondo-c3 {
-  background-color: red;
-  height: 420px;
-}
-
-.fondo-footer4 {
-  background-color: yellow;
-}
-
-@media (max-width: 992px) {
-  .fondo-header4 {
-    background-color: #40e0d0;
-  }
-  .fondo-c3 {
-    background-color: #00ff00;
-    height: 140px;
-  }
-  .fondo-c1,
-  .fondo-c2 {
-    height: 280px;
-  }
-}
-
-@media (max-width: 768px) {
-  .fondo-header4 {
-    background-color: #cd853f;
-  }
-  .fondo-c2 {
-    background-color: #40e0d0;
-    height: 140px;
-  }
-  .fondo-c3 {
-    background-color: red;
-    height: 140px;
-  }
-  .fondo-c1 {
-    height: 140px;
-  }
-}
-
-/** EJERCICIO 5 **/
-.karate p {
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.header5 {
-  height: 10vh;
-  line-height: 10vh;
-  text-align: center;
-}
-
-.dispositivo {
-  height: 15vh;
-  line-height: 15vh;
-  text-align: center;
-}
-
-.col-number-letter {
-  height: 40vh;
-  line-height: 40vh;
-  text-align: center;
-}
-
-.caritas {
-  height: 30vh;
-  line-height: 30vh;
-  text-align: center;
-}
-
-/** EJERCICIO 6 **/
-.bd-gray-400 {
-  color: #000;
-  background-color: #ced4da;
-}
-
-.bd-gray-500 {
-  color: #000;
-  background-color: #adb5bd;
-}
-
-.bd-gray-600 {
-  color: #fff;
-  background-color: #6c757d;
-}
-
-.bd-gray-700 {
-  color: #fff;
-  background-color: #495057;
-}
-
-.my-custom-scrollbar {
-  position: relative;
-  height: 600px;
-  overflow: auto;
-}
-
-.table-wrapper-scroll-y {
-  display: block;
 }
 /*# sourceMappingURL=custom.css.map */
