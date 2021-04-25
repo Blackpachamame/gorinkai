@@ -41,6 +41,16 @@ footer {
   }
 }
 
+/** EJERCICIO 2 **/
+.nav-tabs {
+  border-bottom: 0;
+  .nav-link.active {
+    color: #ffffff;
+    background-color: #d24c4c;
+    border-color: #d24c4c;
+  }
+}
+
 /*** EJERCICIO 4 ***/
 
 /* Defino los bordes */
@@ -293,16 +303,4 @@ footer {
 .blockquote-footer {
   margin-top: -0.5rem;
   margin-bottom: -0.5rem;
-}
-
-/** EJERCICIO 2 **/
-.nav-tabs {
-  border-bottom: 0;
-}
-
-.nav-tabs .nav-link.active,
-.nav-tabs .nav-item.show .nav-link {
-  color: #ffffff;
-  background-color: #d24c4c;
-  border-color: #d24c4c #d24c4c #d24c4c;
 }
