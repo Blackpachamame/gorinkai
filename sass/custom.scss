@@ -299,3 +299,10 @@ footer {
 .nav-tabs {
   border-bottom: 0;
 }
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: #ffffff;
+  background-color: #d24c4c;
+  border-color: #d24c4c #d24c4c #d24c4c;
+}

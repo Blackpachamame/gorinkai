@@ -52,30 +52,28 @@ $(function () {
     });
 });*/
 
+/* Otra funcion del ejercicio 2 */
 $(function () {
+    var targetTab = '#suntzu';
+    $.ajax({
+        url: './tabTextos.html',
+        type: 'GET',
+        success: function (data) {
+            $('#myTabContent').load('./tabTextos.html div' + targetTab);
+        }
+    });
+});
 
+/* Funcion sin nombre que hace alto en el ejercico 2 */
+$(function () {
     $('#myTab').on('click', 'button.active', function () {
         var targetTab = $('button.active').attr('data-bs-target');
         $.ajax({
-            url: 'suntzu.html',
+            url: './tabTextos.html',
             type: 'GET',
-            dataType: 'html',
             success: function (data) {
-                console.log($('#myTabContent').load('suntzu.html div' + targetTab));
-                $('#myTabContent').load('suntzu.html div' + targetTab);
+                $('#myTabContent').load('./tabTextos.html div' + targetTab);
             }
         });
-
-        /*
-        Esto es lo que hicimos antes
-        $.ajax('suntzu.html?' + targetTab)
-            .done(function (response) {
-                console.log(response);
-                $('#myTabContent').html(response);
-            });
-            
-            
-                Esto es otra prueba
-                $('#myTabContent').html($(data).find(targetTab).html());*/
     });
 });
