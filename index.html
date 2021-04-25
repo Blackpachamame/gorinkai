@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Mi CSS Customizado -->
-    <link type="text/css" rel="stylesheet" href="css/reducido.css" />
+    <link type="text/css" rel="stylesheet" href="css/custom.css" />
     <!-- Título -->
     <title>Go Rin Kai</title>
 </head>
@@ -85,10 +85,30 @@
     </section>
     <!-- Ejercicios -->
 
+    <!-- Ejercicio Select -->
+    <section class="pt-3 pt-md-5">
+        <div class="container text-center">
+            <h1>Ejercicio 1</h1>
+            <div class="row text-center justify-content-center">
+                <div class="col-5">
+                    <select id="libro" class="form-select form-select-lg mb-3" aria-label="form-select-lg example">
+                        <option selected> Libro </option>
+                        <option value="1">El Arte de la Guerra</option>
+                        <option value="2">Tao Te Ching</option>
+                        <option value="3">El Libro de los Cinco Anillos</option>
+                    </select>
+                    <select id="capitulo" name="capitulo" class="form-select form-select-lg mb-3"
+                        aria-label="form-select-lg example"></select>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Ejercicio Select -->
+
     <!-- Section Presentación -->
     <section class="pt-3 pt-md-5 pb-3 pb-md-5">
         <div class="container">
-            <h1>Presentación</h1>
+            <h3>Presentación</h3>
             <div class="row">
                 <p>Go Rin Kai significa "Sociedad de los Cinco Anillos". El nombre está inspirado en la obra de Miyamoto
                     Mushashi: "El Libro de los Cinco Anillos", considerado uno de los textos más importantes sobre
@@ -130,7 +150,7 @@
     <!-- Section Finalidad -->
     <section class="pt-3 pt-md-5 pb-3 pb-md-5">
         <div class="container">
-            <h1>Finalidad</h1>
+            <h3>Finalidad</h3>
             <div class="row">
                 <p>El origen de cualquier Arte Marcial, se practique con armas o sin ellas, está en
                     la necesidad de
@@ -174,7 +194,7 @@
     <!-- Section Pregunta -->
     <section class="pt-3 pt-md-5 pb-3 pb-md-5">
         <div class="container">
-            <h1>Popper</h1>
+            <h3>Popper</h3>
             <div class="row">
                 <p>Respondé a la siguiente pregunta: ¿Necesito popper.js para Bootstrap? ¿por qué?
                     ¿para qué?</p>
@@ -208,6 +228,10 @@
             </div>
     </footer>
     <!-- Footer -->
+    <!-- JS Métodos -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/metodos.js" type="text/javascript"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
