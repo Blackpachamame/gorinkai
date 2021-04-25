@@ -1,26 +1,19 @@
 /* EJERCICIO 1 */
 
+//AJAX con POST
 $(function () {
-    //AJAX con post
-    //capturo evento change del select #libro
+    // Capturamos el evento change del select con id "libro"
     $('#libro').on("change", function () {
-        //guardo en una variable el select #capitulo
+        // Guardamos en una variable el select con id "capitulo"
         var capitulo = $("#capitulo");
-        //vacio el capitulo que estara lleno en la opcion con jason
+        // Vaciamos el select para que no se aniden con otras selecciones
         capitulo.empty();
-        //obtengo el valor de 
+        // Obtenemos el valor de libro
         var idLibro = this.value;
-        //alert("El libro es " + idLibro);
-        //mando el post a la base de datos
-        //si no utilizo el console.log(status), el parametro status se puede quitar
-        $.post("./ajaxejerciciosbd.php", { idLibro: idLibro }, function (data, status) {
-            //  console.log(status);
-            /* INSERTO LA DATA EN EL capitulo /
-            //$('#capitulo').html(data);
-            /OPCION DE JSON */
-            //each es un foreach
+        // Enviamos el post a la base de datos
+        $.post("./ajaxejerciciosbd.php", { idLibro: idLibro }, function (data) {
+            // each = foreach
             $.each(data, function (index, data) {
-                //console.log(data);
                 var option = $("<option></option>");
                 option.attr("value", data.id);
                 option.text(data.nombre);
@@ -34,39 +27,25 @@ $(function () {
 
 /* EJERCICIO 2 */
 
-/*$(document).ready(function () {
-    $("#laotse-tab").click(function () {
-        $('button.nav-link.active').css({ "background-color": "#353535", "color": "#fff" });
-    });
-});*/
-
-
-/*$("#suntzu-tab").click(function () {
-    fecha = $("#suntzu").val();
-    $.ajax({
-        url: "proceso.php",
-        type: "POST",
-        data: {
-            fecha: fecha,
-        }
-    });
-});*/
-
-/* Otra funcion del ejercicio 2 */
+// AJAX con GET
+// Mostramos el texto activado por defecto
 $(function () {
     var targetTab = '#suntzu';
     $.ajax({
         url: './tabTextos.html',
         type: 'GET',
         success: function (data) {
+            //Cargamos el texto por defecto dentro del div con id "myTabContent"
             $('#myTabContent').load('./tabTextos.html div' + targetTab);
         }
     });
 });
 
-/* Funcion sin nombre que hace alto en el ejercico 2 */
+// Traemos los textos desde tabTextos.html y los mostramos en textos.html
 $(function () {
+    // Decimos que la función se activa al hacer click en un boton dentro de "myTab"
     $('#myTab').on('click', 'button.active', function () {
+        // Guardamos en una variable el target del boton para usarlos como id
         var targetTab = $('button.active').attr('data-bs-target');
         $.ajax({
             url: './tabTextos.html',
@@ -75,5 +54,25 @@ $(function () {
                 $('#myTabContent').load('./tabTextos.html div' + targetTab);
             }
         });
+    });
+});
+
+
+/* --EJERCICIO 3-- */
+
+/* funcion para cmabiar de img */
+function cambiar(nueva_imagen) {
+    document.getElementById('cambiar').src = nueva_imagen;
+}
+
+
+/*Lleva el texto a el modal*/
+$(function () {
+    $.ajax({
+        url: 'imgDescrip.html',
+        type: 'GET',
+        success: function (data) {
+            $('#aqui').load('imgDescrip.html');
+        }
     });
 });
