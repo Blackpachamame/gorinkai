@@ -2,9 +2,10 @@
 //rescato el valor del post
 $id_l = $_POST['idLibro'];
 $mysqli = conectar();
-$obtenerdatos = consultar($id_l, $mysqli);
+$obtenerdatosLibro = consultarLibro($id_l, $mysqli);
 cerrarconexion($mysqli);
-echo $obtenerdatos;
+echo $obtenerdatosLibro;
+
 
 // Create connection
 function conectar()
@@ -20,10 +21,27 @@ function conectar()
     return $mysqli;
 }
 
-function consultar($id_l, $mysqli)
+function consultarLibro($id_l, $mysqli)
 {
     //consulta a la base de datos
     $sql = "SELECT capitulo.nombre FROM capitulo INNER JOIN libro ON capitulo.idLibro = libro.id WHERE libro.id = $id_l";
+    //mando a la consulta
+    $consulta = $mysqli->query($sql);
+    //verifico que la consulta es correcta
+    if (!$consulta) {
+        die('Consulta no válida: ');
+    } else {
+        $array = $consulta->fetch_all(MYSQLI_ASSOC);
+        $resp = json_encode($array);
+        //print_r($resp);
+        return $resp;
+    }
+}
+
+function consultarNombre($nombreUsuario, $mysqli)
+{
+    //consulta a la base de datos
+    $sql = "SELECT nombre FROM usuario WHERE nombre = $nombreUsuario";
     //mando a la consulta
     $consulta = $mysqli->query($sql);
     //verifico que la consulta es correcta

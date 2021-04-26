@@ -1,4 +1,4 @@
-/* EJERCICIO 1 */
+/* --EJERCICIO 1-- */
 
 //AJAX con POST
 $(function () {
@@ -25,7 +25,7 @@ $(function () {
 });
 
 
-/* EJERCICIO 2 */
+/* --EJERCICIO 2-- */
 
 // AJAX con GET
 // Mostramos el texto activado por defecto
@@ -74,5 +74,32 @@ $(function () {
         success: function (data) {
             $('#aqui').load('imgDescrip.html');
         }
+    });
+});
+
+
+/* --EJERCICIO 4-- */
+
+//AJAX con POST
+$(function () {
+    // Capturamos el evento change del select con id "libro"
+    $('#username').on("change", function () {
+        // Guardamos en una variable el select con id "capitulo"
+        var capitulo = $("#capitulo");
+        // Vaciamos el select para que no se aniden con otras selecciones
+        capitulo.empty();
+        // Obtenemos el valor de libro
+        var idLibro = this.value;
+        // Enviamos el post a la base de datos
+        $.post("../ajaxejerciciosbd.php", { idLibro: idLibro }, function (data) {
+            // each = foreach
+            $.each(data, function (index, data) {
+                var option = $("<option></option>");
+                option.attr("value", data.id);
+                option.text(data.nombre);
+                capitulo.append(option);
+            });
+            console.log(data);
+        }, "json");
     });
 });
