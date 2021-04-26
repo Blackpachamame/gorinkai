@@ -11,7 +11,7 @@ $(function () {
         // Obtenemos el valor de libro
         var idLibro = this.value;
         // Enviamos el post a la base de datos
-        $.post("./ajaxejerciciosbd.php", { idLibro: idLibro }, function (data) {
+        $.post("./tabConfig.php", { idLibro: idLibro }, function (data) {
             // each = foreach
             $.each(data, function (index, data) {
                 var option = $("<option></option>");
@@ -80,26 +80,41 @@ $(function () {
 
 /* --EJERCICIO 4-- */
 
-//AJAX con POST
+/* Verificamos que el nombre no exista en la base de datos */
 $(function () {
-    // Capturamos el evento change del select con id "libro"
-    $('#username').on("change", function () {
-        // Guardamos en una variable el select con id "capitulo"
-        var capitulo = $("#capitulo");
-        // Vaciamos el select para que no se aniden con otras selecciones
-        capitulo.empty();
-        // Obtenemos el valor de libro
-        var idLibro = this.value;
-        // Enviamos el post a la base de datos
-        $.post("../ajaxejerciciosbd.php", { idLibro: idLibro }, function (data) {
-            // each = foreach
-            $.each(data, function (index, data) {
-                var option = $("<option></option>");
-                option.attr("value", data.id);
-                option.text(data.nombre);
-                capitulo.append(option);
-            });
-            console.log(data);
-        }, "json");
+    $('#username').on('change', function () {
+        var username = $(this).val();
+        var dataString = 'username=' + username;
+
+        $.ajax({
+            type: "POST",
+            url: "./formConfig.php",
+            data: dataString,
+            success: function (data) {
+                $('#result-username').html(data);
+            }
+        });
     });
 });
+
+//AJAX con POST
+// $(function () {
+//     // Capturamos el evento change del select con id "libro"
+//     $('#username').on('change', function () {
+//         // Guardamos en una variable el select con id "capitulo"
+//         var resultUsername = $("#result-username");
+//         // Obtenemos el valor de libro
+//         var nombre = this.value;
+//         // Enviamos el post a la base de datos
+//         $.post('./formConfig.php', { nombre: nombre }, function (data) {
+//             // each = foreach
+//             $.each(data, function (index, data) {
+//                 var option = $('<option></option>');
+//                 option.attr('value', data.id);
+//                 option.text(data.nombre);
+//                 resultUsername.append(option);
+//             });
+//             console.log(data);
+//         }, 'json');
+//     });
+// });
