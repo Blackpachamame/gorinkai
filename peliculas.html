@@ -145,81 +145,43 @@
                 <div class="pt-3 col-sm-4 bd-gray-400">
                     <h5>Imágenes</h5>
                     <!-- Lista de nombres de imágenes -->
-                    <!--En el ejercicio 6 del práctico anterior, se utilizó una zona de imágenes extendidas junto con
-                    un título asociado.
-                    Se pide ahora que al hacer click en cada tìtulo aparezca un modal descriptivo de la imagen
-                    y la imagen cambie acorde al titulo. Realizar esto con la ayuda de un modal del framework
-                    Bootstrap, cargue la información de la imagen con AJAX cuando se haga clic en el título de
-                    una imagen AAA. La información puede ser tomada desde una base o desde archivos.
-                    data-tagVideo="https://www.youtube.com/embed/zcX7OJ-L8XQ"-->
-                    <ul class="pt-3 listaImagenes" id="imagenes12">
-
-                        <li><em> <button class="btnPelicula" value="1" data-bs-toggle="modal"
-                                    data-bs-target="#infoModal" onclick="cambiar('img/7samurais.jpg')">Los 7
-                                    samuráis</button></em><strong></strong></li>
-                        <li><em> <button class="btnPelicula" value="2" data-bs-toggle="modal"
-                                    data-bs-target="#infoModal" onclick="cambiar('img/batalla1.jpg')">Lucha empapada de
-                                    lluvia y barro</button></em></li>
-                        <li><em> <button class="btnPelicula" value="3" data-bs-toggle="modal"
-                                    data-bs-target="#infoModal"
-                                    onclick="cambiar('img/preparandoseguerra.jpg')">Preparándose para la
-                                    guerra</button></em></li>
-                        <li><em> <button class="btnPelicula" value="4" data-bs-toggle="modal"
-                                    data-bs-target="#infoModal" onclick="cambiar('img/kabeicortapelo.jpg')">Kanbei
-                                    cortándose el pelo</button></em></li>
-                        <li><em> <button class="btnPelicula" value="5" data-bs-toggle="modal"
-                                    data-bs-target="#infoModal" onclick="cambiar('img/aldea.jpg')">La
-                                    aldea</button></em></li>
-                        <li><em> <button class="btnPelicula" value="6" data-bs-toggle="modal"
-                                    data-bs-target="#infoModal" onclick="cambiar('img/katsushiroyshino.jpg')">Katsushiro
-                                    y Shino</button></em></li>
-                        <li><em> <button class="btnPelicula" value="7" data-bs-toggle="modal"
-                                    data-bs-target="#infoModal" onclick="cambiar('img/batalla2.jpg')">Fragor de la
-                                    batalla</button></em></li>
-                        <li><em> <button class="btnPelicula" value="8" data-bs-toggle="modal"
-                                    data-bs-target="#infoModal" onclick="cambiar('img/akira_kurosawa.jpg')">Akira
-                                    Kurosawa, director</button></em></li>
-                        <li><em> <button class="btnPelicula" value="9" data-bs-toggle="modal"
-                                    data-bs-target="#infoModal" onclick="cambiar('img/gisaku.jpg')">Gisaku, el anciano
-                                    de la aldea</button></em></li>
-                        <li><em> <button class="btnPelicula" value="10" data-bs-toggle="modal"
-                                    data-bs-target="#infoModal" onclick="cambiar('img/shino.jpg')">Shino, amante de
-                                    Katsushiro</button></em></li>
-                        <li><em> <button class="btnPelicula" value="11" data-bs-toggle="modal"
-                                    data-bs-target="#infoModal" onclick="cambiar('img/finalsamurai.jpg')">Final de los
-                                    samuráis</button></em></li>
-                        <li><em> <button class="btnPelicula" value="12" data-bs-toggle="modal"
-                                    data-bs-target="#infoModal" onclick="cambiar('img/finalgranjeros.jpg')">Final de los
-                                    granjeros</button></em></li>
+                    <ul class="pt-3 listaImagenes">
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="0"><em>Los 7 samiráis</em><strong> (Derecha)</strong></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="1"><em>Lucha empapada de lluvia y barro</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="2"><em>Preparándose para la guerra</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="3"><em>Kanbei cortándose el pelo</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="4"><em>La aldea</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="5"><em>Katsushiro y Shino</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="6"><em>Fragor de la batalla</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="7"><em>Akira Kurosawa, director</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="8"><em>Gisaku, el anciano de la aldea</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="9"><em>Shino, amante de Katsushiro</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="10"><em>Final de los samuráis</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="11"><em>Final de los granjeros</em></li>
                     </ul>
                 </div>
                 <!-- Imagen -->
-                <!---Modal-->
-                <div class="modal fade" id="infoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                    aria-labelledby="infoModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
+                <div class="col-sm-8 bd-gray-400">
+                    <!-- Modal -->
+                    <div class="modal fade" id="infoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
                             <div class="modal-header">
                                 <p id="tituloImagen"></p>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                </button>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">  </button>
                             </div>
                             <div class="modal-body">
-                                <div class="ratio ratio-16x9">
-                                    <p id="descripcionImagen"></p>
-
-                                </div>
+                              <div class="ratio ratio-16x9">                
+                                <p id="descripcionImagen"></p>
+                               
+                              </div>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                </div>
-                <!--Modal-->
-
-
-
-                <div class="col-sm-8 bd-gray-400">
-                    <img src="img/7samuraisO.jpg" class="img-thumbnail" id="cambiar" alt="" width="500" height="200" />
-                    <!--<img src="img/7samuraisO.jpg" class="img-thumbnail" alt="7samuraisO">-->
+                      </div>
+                    <!-- Modal -->
+                    <img id="portada" src="img/7samuraisO.jpg" class="img-thumbnail" alt="7samuraisO" style="display: initial;">
+                    <img id="fotografia" src="" class="img-thumbnail" alt="imagen de pelicula 7 Samurais." style="display: none;">
                 </div>
             </div>
             <!-- Fila 4 -->

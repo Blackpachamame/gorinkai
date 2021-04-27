@@ -60,32 +60,25 @@ $(function () {
 
 /* --EJERCICIO 3-- */
 
-/* Función para cambiar de img */
-function cambiar(nueva_imagen) {
-    document.getElementById('cambiar').src = nueva_imagen;
-}
-
-/* Lleva el texto a el modal */
+/*Lleva el texto a el modal y cambia la imagen segun sea la opcion seleccionada. */
 $(function () {
-    $('.btnPelicula').on('click', function () {
-        valor = this.value;
-        console.log("este es el valorrr " + valor);
-        console.log("entre");
+    $('.listPelicula').on('click',function() {
+        valor = this.value; 
         $.ajax({
             type: 'GET',
-            url: 'dataMovies.json',
+            url: './dataMovies.json',
             dataType: 'json',
             contentType: 'application/json',
             cache: false,
             success: function (data) {
-                $.each(data, function (id, obj) {
-                    console.log(id);
-                    console.log(obj);
-                    if (id == valor) {
+                $.each(data, function(id,obj){
+                    if(id == valor){ 
                         $('#tituloImagen').html(obj.titulo);
                         $('#descripcionImagen').html(obj.descripcion);
+                        $('#portada').css("display", "none");
+                        $('#fotografia').attr('src', (obj.url));
+                        $('#fotografia').css("display", "initial");
                     }
-
                 });
             }
         });
