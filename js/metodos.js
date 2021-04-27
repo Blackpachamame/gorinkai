@@ -60,10 +60,10 @@ $(function () {
 
 /* --EJERCICIO 3-- */
 
-/*Lleva el texto a el modal y cambia la imagen segun sea la opcion seleccionada. */
+// Lleva el texto a el modal y cambia la imagen segun sea la opcion seleccionada
 $(function () {
-    $('.listPelicula').on('click',function() {
-        valor = this.value; 
+    $('.listPelicula').on('click', function () {
+        valor = this.value;
         $.ajax({
             type: 'GET',
             url: './dataMovies.json',
@@ -71,8 +71,8 @@ $(function () {
             contentType: 'application/json',
             cache: false,
             success: function (data) {
-                $.each(data, function(id,obj){
-                    if(id == valor){ 
+                $.each(data, function (id, obj) {
+                    if (id == valor) {
                         $('#tituloImagen').html(obj.titulo);
                         $('#descripcionImagen').html(obj.descripcion);
                         $('#portada').css("display", "none");
@@ -88,7 +88,7 @@ $(function () {
 
 /* --EJERCICIO 4-- */
 
-/* Verificamos que el nombre no exista en la base de datos */
+// Verificamos que el nombre no exista en la base de datos
 $(function () {
     $('#username').on('change', function () {
         var username = $(this).val();
