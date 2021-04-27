@@ -79,7 +79,6 @@ $(function () {
                         $('#fotografia').attr('src', (obj.url));
                         $('#fotografia').css("display", "initial");
                     }
-                    
                 });
             }
         });
