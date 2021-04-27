@@ -60,20 +60,29 @@ $(function () {
 
 /* --EJERCICIO 3-- */
 
-/* funcion para cmabiar de img */
-function cambiar(nueva_imagen) {
-    document.getElementById('cambiar').src = nueva_imagen;
-}
-
-
-/*Lleva el texto a el modal*/
+/*Lleva el texto a el modal y cambia la imagen segun sea la opcion seleccionada. */
 $(function () {
-    $.ajax({
-        url: 'imgDescrip.html',
-        type: 'GET',
-        success: function (data) {
-            $('#aqui').load('imgDescrip.html');
-        }
+    $('.listPelicula').on('click',function() {
+        valor = this.value; 
+        $.ajax({
+            type: 'GET',
+            url: './dataMovies.json',
+            dataType: 'json',
+            contentType: 'application/json',
+            cache: false,
+            success: function (data) {
+                $.each(data, function(id,obj){
+                    if(id == valor){ 
+                        $('#tituloImagen').html(obj.titulo);
+                        $('#descripcionImagen').html(obj.descripcion);
+                        $('#portada').css("display", "none");
+                        $('#fotografia').attr('src', (obj.url));
+                        $('#fotografia').css("display", "initial");
+                    }
+                    
+                });
+            }
+        });
     });
 });
 

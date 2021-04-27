@@ -1,0 +1,84 @@
+[
+  {
+    "id": "pelicula1",
+    "titulo": "<b> Los 7 samuráis </b>",
+    "descripcion": "Gracias a Kambei, los aldeanos logran reunir 7 samuráis para que los ayuden a defender la aldea.",
+    "url": "img/7samuraisO.jpg"
+  },
+  {
+    "id": "pelicula2",
+    "titulo": " <b>Lucha empapada de lluvia y barro</b>",
+    "descripcion": "La planificación de Kurosawa, como en todo su cine, es exquisita y perfeccionista. Sólo a un maestro se le ocurre rodar la batalla final bajo la lluvia, el barro, los charcos, con los cascos de los caballos salpicando, la cámara lenta apenas se nota, quizás sólo poetiza la imagen en medio de la barbarie.",
+    "url": "img/batalla1O.jpg"
+  },
+  {
+    "id": "pelicula3",
+    "titulo": "<b>Preparándose para la guerra</b>",
+    "descripcion": "Una vez de vuelta en la aldea, los hombres comienzan sus preparativos, a pesar de que los aldeanos son fríos con ellos.",
+    "url": "img/preparandoseguerraO.jpg"
+
+  },
+  {
+    "id": "pelicula4",
+    "titulo": "<b>Kanbei cortándose el pelo</b>",
+    "descripcion": "Kambei se corta su propio nudo de pelo samurái para aparecer como un sacerdote y rescatar a un joven secuestrado.",
+    "url": "img/kabeicortapeloO.jpg"
+
+  },
+  {
+    "id": "pelicula5",
+    "titulo": "<b>La aldea</b>",
+    "descripcion": "Japón, siglo XVI. Una aldea de campesinos indefensos es repetidamente atacada y saqueada por una banda de forajidos. ",
+    "url": "img/aldeaO.jpg"
+
+  },
+  {
+    "id": "pelicula6",
+    "titulo": "<b>Katsushiro y Shino</b>",
+    "descripcion": "El samurái más joven, Katsushiro, tiene un romance con Shino (hija de un granjero). Es un amor prohibido por el estatus social de cada uno.",
+    "url": "img/katsushiroyshinoO.jpg"
+
+  },
+  {
+    "id": "pelicula7",
+    "titulo": "<b>Fragor de la batalla</b>",
+    "descripcion": "Bajo la lluvia y el barro, los perfiles se desdibujan y todo parece igual, pero la pose y el semblante hierático, armonioso, equilibrado del guerrero, destaca sobre la informe marabunta sólo deseosa de matar de cualquier forma. El samurai sabe que, para matar, y para morir, también hay que respetar una estética.",
+    "url": "img/batalla2O.jpg"
+
+  },
+  {
+    "id": "pelicula8",
+    "titulo": "<b>Akira Kurosawa, director</b>",
+    "descripcion": "Akira Kurosawa fue uno de los más célebres directores de cine de Japón.​ Sugata sanshirô ​ fue su ópera prima y su filmografía consta de 30 películas, rodadas a lo largo de cinco décadas.",
+    "url": "img/akira_kurosawaO.jpg"
+
+  },
+  {
+    "id": "pelicula9",
+    "titulo": "<b>Gisaku, el anciano de la aldea</b>",
+    "descripcion": "El anciano de la aldea es el que recomienda a los aldeanos reclutar un grupo de mercenarios para que los defiendan de los bandidos.",
+    "url": "img/gisakuO.jpg"
+
+  },
+  {
+    "id": "pelicula10",
+    "titulo": "<b>Shino, amante de Katsushiro</b>",
+    "descripcion": "El personaje femenino de Shino es el mejor ejemplo de la perspectiva de Akira Kurosawa sobre los tipos y deberes sociales. Es una chica joven, hermosa y fuerte, cuyo padre está preocupado de que los samuráis se la roben. Así que le corta el pelo y la hace parecer un niño.",
+    "url": "src='img/shinoO.jpg'"
+
+  },
+  {
+    "id": "pelicula11",
+    "titulo": "<b>Final de los samuráis</b>",
+    "descripcion": "En su cima, los túmulos de los samuráis, con su espada clavada en la tierra, dominarán la ladera llena de tumbas de generaciones de campesinos, su lugar sólo cabe en la cima, aunque sean tan pobres como sus defendidos.",
+    "url": "img/finalsamuraiO.jpg"
+
+  },
+  {
+    "id": "pelicula12",
+    "titulo": "<b>Final de los granjeros</b>",
+    "descripcion": "“Han ganado los campesinos, nosotros hemos vuelto a perder”, sentenciará Shimada cuando todo termina; ellos y los campesinos son menos, pero estos han perdido el miedo hasta que vuelva a aparecer un nuevo grupo de malhechores; no hay agradecimiento, no hay recompensa, no hay despedida.",
+    "url": "img/finalgranjerosO.jpg"
+
+  }
+]

@@ -144,44 +144,42 @@
                     <h5>Imágenes</h5>
                     <!-- Lista de nombres de imágenes -->
                     <ul class="pt-3 listaImagenes">
-                        <li><em>Los 7 samiráis</em><strong> (Derecha)</strong></li>
-                        <li><em>Lucha empapada de lluvia y barro</em></li>
-                        <li><em>Preparándose para la guerra</em></li>
-                        <li><em>Kanbei cortándose el pelo</em></li>
-                        <li><em>La aldea</em></li>
-                        <li><em>Katsushiro y Shino</em></li>
-                        <li><em>Fragor de la batalla</em></li>
-                        <li><em>Akira Kurosawa, director</em></li>
-                        <li><em>Gisaku, el anciano de la aldea</em></li>
-                        <li><em>Shino, amante de Katsushiro</em></li>
-                        <li><em>Final de los samuráis</em></li>
-                        <li><em>Final de los granjeros</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="0"><em>Los 7 samiráis</em><strong> (Derecha)</strong></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="1"><em>Lucha empapada de lluvia y barro</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="2"><em>Preparándose para la guerra</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="3"><em>Kanbei cortándose el pelo</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="4"><em>La aldea</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="5"><em>Katsushiro y Shino</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="6"><em>Fragor de la batalla</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="7"><em>Akira Kurosawa, director</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="8"><em>Gisaku, el anciano de la aldea</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="9"><em>Shino, amante de Katsushiro</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="10"><em>Final de los samuráis</em></li>
+                        <li class="listPelicula" data-bs-toggle="modal" data-bs-target="#infoModal" value="11"><em>Final de los granjeros</em></li>
                     </ul>
                 </div>
                 <!-- Imagen -->
                 <div class="col-sm-8 bd-gray-400">
                     <!-- Modal -->
-                    <div class="modal" tabindex="-1">
+                    <div class="modal fade" id="infoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Modal title</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Modal body text goes here.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
+                          <div class="modal-content">
+                            <div class="modal-header">
+                                <p id="tituloImagen"></p>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">  </button>
                             </div>
+                            <div class="modal-body">
+                              <div class="ratio ratio-16x9">                
+                                <p id="descripcionImagen"></p>
+                               
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                    </div>
+                      </div>
                     <!-- Modal -->
-                    <img src="img/7samuraisO.jpg" class="img-thumbnail" alt="7samuraisO">
+                    <img id="portada" src="img/7samuraisO.jpg" class="img-thumbnail" alt="7samuraisO" style="display: initial;">
+                    <img id="fotografia" src="" class="img-thumbnail" alt="imagen de pelicula 7 Samurais." style="display: none;">
                 </div>
             </div>
             <!-- Fila 4 -->
