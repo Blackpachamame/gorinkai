@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Mi CSS Customizado -->
-    <link type="text/css" rel="stylesheet" href="css/reducido.css" />
+    <link type="text/css" rel="stylesheet" href="css/custom.css" />
+
 
     <!-- Título -->
     <title>Películas</title>
@@ -121,6 +122,7 @@
                 </div>
             </div>
             <!-- Fila 2 (Imágenes) -->
+
             <div class="row py-3">
                 <div class="text-center">
                     <img src="img/7samurais.jpg" class="my-1 img-thumbnail" alt="7samurais">
@@ -143,45 +145,81 @@
                 <div class="pt-3 col-sm-4 bd-gray-400">
                     <h5>Imágenes</h5>
                     <!-- Lista de nombres de imágenes -->
-                    <ul class="pt-3 listaImagenes">
-                        <li><em>Los 7 samiráis</em><strong> (Derecha)</strong></li>
-                        <li><em>Lucha empapada de lluvia y barro</em></li>
-                        <li><em>Preparándose para la guerra</em></li>
-                        <li><em>Kanbei cortándose el pelo</em></li>
-                        <li><em>La aldea</em></li>
-                        <li><em>Katsushiro y Shino</em></li>
-                        <li><em>Fragor de la batalla</em></li>
-                        <li><em>Akira Kurosawa, director</em></li>
-                        <li><em>Gisaku, el anciano de la aldea</em></li>
-                        <li><em>Shino, amante de Katsushiro</em></li>
-                        <li><em>Final de los samuráis</em></li>
-                        <li><em>Final de los granjeros</em></li>
+                    <!--En el ejercicio 6 del práctico anterior, se utilizó una zona de imágenes extendidas junto con
+                    un título asociado.
+                    Se pide ahora que al hacer click en cada tìtulo aparezca un modal descriptivo de la imagen
+                    y la imagen cambie acorde al titulo. Realizar esto con la ayuda de un modal del framework
+                    Bootstrap, cargue la información de la imagen con AJAX cuando se haga clic en el título de
+                    una imagen AAA. La información puede ser tomada desde una base o desde archivos.
+                    data-tagVideo="https://www.youtube.com/embed/zcX7OJ-L8XQ"-->
+                    <ul class="pt-3 listaImagenes" id="imagenes12">
+
+                        <li><em> <button class="btnPelicula" value="1" data-bs-toggle="modal"
+                                    data-bs-target="#infoModal" onclick="cambiar('img/7samurais.jpg')">Los 7
+                                    samuráis</button></em><strong></strong></li>
+                        <li><em> <button class="btnPelicula" value="2" data-bs-toggle="modal"
+                                    data-bs-target="#infoModal" onclick="cambiar('img/batalla1.jpg')">Lucha empapada de
+                                    lluvia y barro</button></em></li>
+                        <li><em> <button class="btnPelicula" value="3" data-bs-toggle="modal"
+                                    data-bs-target="#infoModal"
+                                    onclick="cambiar('img/preparandoseguerra.jpg')">Preparándose para la
+                                    guerra</button></em></li>
+                        <li><em> <button class="btnPelicula" value="4" data-bs-toggle="modal"
+                                    data-bs-target="#infoModal" onclick="cambiar('img/kabeicortapelo.jpg')">Kanbei
+                                    cortándose el pelo</button></em></li>
+                        <li><em> <button class="btnPelicula" value="5" data-bs-toggle="modal"
+                                    data-bs-target="#infoModal" onclick="cambiar('img/aldea.jpg')">La
+                                    aldea</button></em></li>
+                        <li><em> <button class="btnPelicula" value="6" data-bs-toggle="modal"
+                                    data-bs-target="#infoModal" onclick="cambiar('img/katsushiroyshino.jpg')">Katsushiro
+                                    y Shino</button></em></li>
+                        <li><em> <button class="btnPelicula" value="7" data-bs-toggle="modal"
+                                    data-bs-target="#infoModal" onclick="cambiar('img/batalla2.jpg')">Fragor de la
+                                    batalla</button></em></li>
+                        <li><em> <button class="btnPelicula" value="8" data-bs-toggle="modal"
+                                    data-bs-target="#infoModal" onclick="cambiar('img/akira_kurosawa.jpg')">Akira
+                                    Kurosawa, director</button></em></li>
+                        <li><em> <button class="btnPelicula" value="9" data-bs-toggle="modal"
+                                    data-bs-target="#infoModal" onclick="cambiar('img/gisaku.jpg')">Gisaku, el anciano
+                                    de la aldea</button></em></li>
+                        <li><em> <button class="btnPelicula" value="10" data-bs-toggle="modal"
+                                    data-bs-target="#infoModal" onclick="cambiar('img/shino.jpg')">Shino, amante de
+                                    Katsushiro</button></em></li>
+                        <li><em> <button class="btnPelicula" value="11" data-bs-toggle="modal"
+                                    data-bs-target="#infoModal" onclick="cambiar('img/finalsamurai.jpg')">Final de los
+                                    samuráis</button></em></li>
+                        <li><em> <button class="btnPelicula" value="12" data-bs-toggle="modal"
+                                    data-bs-target="#infoModal" onclick="cambiar('img/finalgranjeros.jpg')">Final de los
+                                    granjeros</button></em></li>
                     </ul>
                 </div>
                 <!-- Imagen -->
-                <div class="col-sm-8 bd-gray-400">
-                    <!-- Modal -->
-                    <div class="modal" tabindex="-1">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Modal title</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Modal body text goes here.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                <!---Modal-->
+                <div class="modal fade" id="infoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="infoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <p id="tituloImagen"></p>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ratio ratio-16x9">
+                                    <p id="descripcionImagen"></p>
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Modal -->
-                    <img src="img/7samuraisO.jpg" class="img-thumbnail" alt="7samuraisO">
+                </div>
+                <!--Modal-->
+
+
+
+                <div class="col-sm-8 bd-gray-400">
+                    <img src="img/7samuraisO.jpg" class="img-thumbnail" id="cambiar" alt="" width="500" height="200" />
+                    <!--<img src="img/7samuraisO.jpg" class="img-thumbnail" alt="7samuraisO">-->
                 </div>
             </div>
             <!-- Fila 4 -->
