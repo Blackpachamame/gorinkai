@@ -11711,8 +11711,12 @@ footer a {
 /* Genero un scroll en la tabla con un alto determinado */
 .my-custom-scrollbar {
   position: relative;
-  height: 600px;
+  height: 100vh;
   overflow: auto;
+}
+
+.my-custom-scrollbar .table {
+  margin-bottom: 0;
 }
 
 .table-wrapper-scroll-y {
@@ -11785,5 +11789,22 @@ footer a {
 .blockquote-footer {
   margin-top: -0.5rem;
   margin-bottom: -0.5rem;
+}
+
+/** LISTA IMAGENES - MODAL **/
+.list-group-item {
+  padding: 0.2rem 0rem;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #0e0e0e;
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+  color: #90ee90;
+}
+
+.modal-content {
+  color: #0e0e0e;
 }
 /*# sourceMappingURL=custom.css.map */
