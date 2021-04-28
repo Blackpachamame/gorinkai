@@ -105,24 +105,91 @@ $(function () {
     });
 });
 
-//AJAX con POST
+
+/* --EJERCICIO 5-- */
+// Url para llamar a la petición por ajax
+// var url_listar_tabla = "./listar.php";
+
 // $(function () {
-//     // Capturamos el evento change del select con id "libro"
-//     $('#username').on('change', function () {
-//         // Guardamos en una variable el select con id "capitulo"
-//         var resultUsername = $("#result-username");
-//         // Obtenemos el valor de libro
-//         var nombre = this.value;
-//         // Enviamos el post a la base de datos
-//         $.post('./formConfig.php', { nombre: nombre }, function (data) {
-//             // each = foreach
-//             $.each(data, function (index, data) {
-//                 var option = $('<option></option>');
-//                 option.attr('value', data.id);
-//                 option.text(data.nombre);
-//                 resultUsername.append(option);
-//             });
-//             console.log(data);
-//         }, 'json');
-//     });
+//     // Paginador e items por página
+//     paginador = $(".paginador"); //clase paginador
+//     var items = 3, numeros = 4;
+//     // Inicio paginador y envio por ajax para realizar la callback
+//     init_paginator(paginador, items, numeros);
+//     set_callback(get_data_callback_tabla_top);
+//     cargaPagina(0);
 // });
+
+// Petición enviada como callback
+// function get_data_callback_tabla_top() {
+//     $.ajax({
+//         data: {
+//             limit: itemsPorPagina,
+//             offset: desde,
+//         },
+//         type: "POST",
+//         url: url_listar_tabla
+//     }).done(function (data, textStatus, jqXHR) {
+//         // Clave lista del json data
+//         var lista = data.lista;
+//         $("#tabla").html("");
+
+//         // Actualizar las paginas
+//         if (pagina = 0) {
+//             creaPaginador(data.cantidad);
+//         }
+//         // Genera la tbody
+//         $each(lista, function (ind, elem) {
+//             $('<tr>' +
+//                 '<td>' + elem.indice + '<td>',
+//                 '<td>' + elem.nombre + '<td>',
+//                 '<td>' + elem.descripcion + '<td>',
+//                 '<tr>').appendTO($("#tabla"));
+//         });
+//     }).fail(function (jqXHR, textStatus, textError) {
+//         alert("Error al relaizar la petición".textError);
+//     });
+// }
+//url para llamar a la peticion por ajx
+var url_listar_tabla = "./listar.php";
+
+$(function () {
+    //paginador e items por pagina
+    paginador = $(".paginador"); //clase paginador
+    var items = 3, numeros = 4;
+    //inicio paginador y envio por ajax para realizar la callback
+    init_paginator(paginador, items, numeros);
+    set_callback(get_data_callback_tabla_top); //nombre function
+    cargaPagina(0);
+});
+
+//peticion enviada como callback
+function get_data_callback_tabla_top() {
+    $.ajax({
+        data: {
+            limit: itemsPorPagina,
+            offset: desde,
+        },
+        type: "POST",
+        url: url_listar_tabla
+    }).done(function (data, textStatus, jqXHR) {
+        //clave lista del json data
+        var lista = data.lista;
+        $("#tabla").html("");
+
+        //actualizar las paginas
+        if (pagina = 0) {
+            creaPaginador(data.cantidad);
+        }
+        //genera la tbody
+        $each(lista, function (ind, elem) {
+            $('<tr>' +
+                '<td>' + elem.indice + '<td>',
+                '<td>' + elem.nombre + '<td>',
+                '<td>' + elem.descricion + '<td>',
+                '<tr>').appendTO($("#tabla"));
+        });
+    }).fail(function (jqXHR, textStatus, textError) {
+        alert("error al relaizar la peticion".textError);
+    });
+}

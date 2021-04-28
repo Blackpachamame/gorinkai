@@ -59,7 +59,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-h1, .h1, h2, .h2, h3, .h3, h5, .h5 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -96,6 +96,16 @@ h3, .h3 {
   }
 }
 
+h4, .h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+
+@media (min-width: 1200px) {
+  h4, .h4 {
+    font-size: 1.5rem;
+  }
+}
+
 h5, .h5 {
   font-size: 1.25rem;
 }
@@ -128,6 +138,10 @@ blockquote {
 b,
 strong {
   font-weight: bolder;
+}
+
+small, .small {
+  font-size: 0.875em;
 }
 
 a {
@@ -184,7 +198,6 @@ th {
 thead,
 tbody,
 tr,
-td,
 th {
   border-color: inherit;
   border-style: solid;
@@ -285,6 +298,11 @@ textarea {
 
 .blockquote-footer::before {
   content: "\2014\00A0";
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 
 .img-thumbnail {
@@ -839,6 +857,43 @@ textarea.form-control {
   opacity: 0.65;
 }
 
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #bb2d3b;
+  border-color: #b02a37;
+}
+
+ .btn-danger:focus {
+  color: #fff;
+  background-color: #bb2d3b;
+  border-color: #b02a37;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
+}
+
+ .btn-danger:active, .btn-danger.active {
+  color: #fff;
+  background-color: #b02a37;
+  border-color: #a52834;
+}
+
+ .btn-danger:active:focus, .btn-danger.active:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
+}
+
+.btn-danger:disabled {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
 .btn-dark {
   color: #fff;
   background-color: #0e0e0e;
@@ -874,6 +929,12 @@ textarea.form-control {
   color: #fff;
   background-color: #0e0e0e;
   border-color: #0e0e0e;
+}
+
+.btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
 }
 
 .fade {
@@ -1186,6 +1247,14 @@ textarea.form-control {
   border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
 }
 
+.alert {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
 @keyframes progress-bar-stripes {
   0% {
     background-position-x: 1rem;
@@ -1292,6 +1361,65 @@ textarea.form-control {
       -ms-user-select: none;
           user-select: none;
   opacity: 0.25;
+}
+
+.toast {
+  width: 350px;
+  max-width: 100%;
+  font-size: 0.875rem;
+  pointer-events: auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.toast:not(.showing):not(.show) {
+  opacity: 0;
+}
+
+.toast.hide {
+  display: none;
+}
+
+.toast-container {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+.toast-container > :not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.toast-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 0.75rem;
+  color: #6c757d;
+  background-color: rgba(255, 255, 255, 0.85);
+  background-clip: padding-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.toast-header .btn-close {
+  margin-right: -0.375rem;
+  margin-left: 0.75rem;
+}
+
+.toast-body {
+  padding: 0.75rem;
+  word-wrap: break-word;
 }
 
 .modal {
@@ -1484,6 +1612,18 @@ textarea.form-control {
           box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
+.position-fixed {
+  position: fixed !important;
+}
+
+.bottom-0 {
+  bottom: 0 !important;
+}
+
+.end-0 {
+  right: 0 !important;
+}
+
 .border {
   border: 1px solid #dee2e6 !important;
 }
@@ -1556,6 +1696,18 @@ textarea.form-control {
 
 .mt-4 {
   margin-top: 1.5rem !important;
+}
+
+.me-2 {
+  margin-right: 0.5rem !important;
+}
+
+.me-auto {
+  margin-right: auto !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
 }
 
 .mb-3 {
@@ -2076,5 +2228,19 @@ footer a {
 
 .modal-content {
   color: #0e0e0e;
+}
+
+/** TOAST - CARD-OK **/
+.tam-img {
+  width: 2rem;
+}
+
+.card-ok {
+  max-width: 30rem;
+}
+
+/** NAV EJERCICIOS **/
+#ejercicios li.nav-item a:hover {
+  color: #40e0d0;
 }
 /*# sourceMappingURL=custom.css.map */

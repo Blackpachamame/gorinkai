@@ -329,3 +329,17 @@ footer {
 .modal-content {
   color: $dark;
 }
+
+/** TOAST - CARD-OK **/
+.tam-img {
+  width: 2rem;
+}
+
+.card-ok {
+  max-width: 30rem;
+}
+
+/** NAV EJERCICIOS **/
+#ejercicios li.nav-item a:hover {
+  color: $success;
+}
