@@ -2,7 +2,7 @@
 
 ## AJAX y jQuery (Parte 1 y Parte 2)
 
-Este repositorio contiene una página web creada a partir de las consignas de los trabajos prácticos de Programación Web Avanzada.
+Este repositorio contiene una página web (Go Rin Kai) creada a partir de las consignas de los trabajos prácticos de Programación Web Avanzada.
 
 ## Tabla de contenido
 
@@ -17,10 +17,11 @@ Este repositorio contiene una página web creada a partir de las consignas de lo
 
 ## Descripción
 
-<em>Nombre del grupo:</em> The Condicionales
-<em>Participantes:</em> María Eugenia Garcia, Manuel Ortiz, Marcos Andrés Travaglini
-<em>Carrera:</em> Tecnicatura Universitaria en Desarrollo Web
-<em>Materia:</em> Programación Web Avanzada
+- <em>Nombre del grupo:</em> The Condicionales
+- <em>Participantes:</em> [Eugenia Garcia](https://github.com/Eugenia-2793), [Manuel Ortiz](https://github.com/mannusho), [Marcos Andrés Travaglini](https://github.com/Blackpachamame)
+- <em>Consultor técnico:</em> [Luis Miguel Cañete](https://github.com/Venserthesojourner)
+- <em>Carrera:</em> Tecnicatura Universitaria en Desarrollo Web
+- <em>Materia:</em> Programación Web Avanzada
 
 ### Objetivo
 
@@ -29,6 +30,7 @@ El objetivo de este práctico es realizar una primera aproximación a la program
 ### Links
 
 - [URL del sitio en vivo](https://blackpachamame.github.io/pwa-tp1/)
+- [Página inspirada en un sitio web antiguo](http://www.gorinkai.com/)
 
 ## Mi Procedimiento
 
