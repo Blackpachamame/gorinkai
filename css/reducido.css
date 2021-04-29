@@ -185,6 +185,13 @@ svg {
   vertical-align: middle;
 }
 
+
+tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
 label {
   display: inline-block;
 }
@@ -2179,7 +2186,7 @@ footer a {
 
 /** TOAST - CARD-OK **/
 .tam-img {
-  width: 2rem;
+  width: 3rem;
 }
 
 .card-ok {
