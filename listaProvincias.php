@@ -1,20 +1,18 @@
 <?php
 include_once('conexion.php');
 
-// Rescatar nombre
-print_r($_POST);
-$nombreUsuario = $_POST['username'];
+// Obtengo el valor del post
+$provincia = $_GET['inicial'];
 $mysqli = conectar();
-$obtenerNombreUsuario = consultarNombre($nombreUsuario, $mysqli);
-//print_r($obtenerNombreUsuario);
+$obtenerdatosProvincia = consultarProvincia($provincia, $mysqli);
 cerrarconexion($mysqli);
-echo $obtenerNombreUsuario;
+echo $obtenerdatosProvincia;
 
 
-function consultarNombre($nombreUsuario, $mysqli)
+function consultarProvincia($provincia, $mysqli)
 {
     // Consulta a la base de datos
-    $sql = "SELECT nombre FROM usuario WHERE nombre = '$nombreUsuario'";
+    $sql = "SELECT descripcion FROM estados WHERE descripcion LIKE '$provincia%'";
     // Envío a la consulta
     $consulta = $mysqli->query($sql);
     // Verifico que la consulta es correcta
@@ -23,6 +21,7 @@ function consultarNombre($nombreUsuario, $mysqli)
     } else {
         $array = $consulta->fetch_all(MYSQLI_ASSOC);
         $resp = json_encode($array);
+        //print_r($resp);
+        return $resp;
     }
-    return $resp;
 }

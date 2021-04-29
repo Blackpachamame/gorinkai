@@ -1,7 +1,7 @@
 <?php
 
 // Connect database 
-require_once('conexion.php');
+include_once('conexion.php');
 $mysqli = conectar();
 
 $limit = 5;
@@ -19,10 +19,10 @@ $output = "";
 
 if (mysqli_num_rows($result) > 0) {
 
-    $output .= "<table class='table'>
+    $output .= "<table class='table table-dark table-striped'>
 		    <thead>
 		        <tr>
-		           <th>Indice</th>
+		           <th>#</th>
     	           <th>Nombre</th>
 			       <th>Descripcion</th>
 	                 </tr>
@@ -46,7 +46,7 @@ if (mysqli_num_rows($result) > 0) {
     $totalRecords = mysqli_num_rows($records);
     $totalPage = ceil($totalRecords / $limit);
 
-    $output .= "<ul class='pagination justify-content-center' style='margin:20px 0'>";
+    $output .= "<ul class='pagination d-flex justify-content-center'>";
 
     for ($i = 1; $i <= $totalPage; $i++) {
         if ($i == $page_no) {

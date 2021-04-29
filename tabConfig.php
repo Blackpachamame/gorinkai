@@ -1,5 +1,5 @@
 <?php
-require('conexion.php');
+include_once('conexion.php');
 
 // Obtengo el valor del post
 $id_l = $_POST['idLibro'];

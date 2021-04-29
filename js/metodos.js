@@ -147,11 +147,11 @@ $(function () {
             if (empresa != "") {
                 $('#empresa').addClass(' is-valid');
                 $('#feed2').addClass('valid-feedback');
-                $('#feed2').text('Muy bien! espero que te tengan en blanco');
+                $('#feed2').text('¡Muy bien! espero que te tengan en blanco');
             } else {
                 $('#empresa').addClass(' is-invalid');
                 $('#feed2').addClass('invalid-feedback');
-                $('#feed2').text('PONE ALGO FORRO, DALE, DALE, AGUANTE INTOXICADOS');
+                $('#feed2').text('Vacío como mi corazón');
             }
         }
 
@@ -162,7 +162,7 @@ $(function () {
                     $('#feed2').removeClass('invalid-feedback');
                     $('#empresa').addClass(' is-valid');
                     $('#feed2').addClass('valid-feedback');
-                    $('#feed2').text('Muy bien! espero que te tengan en blanco');
+                    $('#feed2').text('¡Muy bien! espero que te tengan en blanco');
                 }
             }
             if (cantClassEmpr == 21) {
@@ -170,13 +170,14 @@ $(function () {
                 $('#empresa').removeClass(' is-valid');
                 $('#empresa').addClass(' is-invalid');
                 $('#feed2').addClass('invalid-feedback');
-                $('#feed2').text('PONE ALGO FORRO, DALE, DALE, AGUANTE INTOXICADOS');
+                $('#feed2').text('Vacío como mi corazón');
             }
         }
 
     });
 });
-// Input: Telefono
+
+// Input: Teléfono
 $(function () {
     $('#telefono').on('change', function () {
         let telefono = $(this).val();
@@ -187,11 +188,11 @@ $(function () {
             if (regex.test(telefono)) {
                 $('#telefono').addClass(' is-valid');
                 $('#feed3').addClass('valid-feedback');
-                $('#feed3').text('Listo, esta noche te llamo.');
+                $('#feed3').text('Listo, esta noche te llamo');
             } else {
                 $('#telefono').addClass(' is-invalid');
                 $('#feed3').addClass('invalid-feedback');
-                $('#feed3').text('Ja, vos me queres cagar? mira que Euge te encuentra hasta en myspace eh');
+                $('#feed3').text('Ja, ¿vos me queres engañar? mira que la Euge te encuentra hasta en myspace eh');
             }
         }
 
@@ -202,19 +203,60 @@ $(function () {
                     $('#feed3').removeClass('invalid-feedback');
                     $('#telefono').addClass(' is-valid');
                     $('#feed3').addClass('valid-feedback');
-                    $('#feed3').text('Listo, esta noche te llamo.');
+                    $('#feed3').text('Listo, esta noche te llamo');
                 }
             }
             if (cantClassTel == 21) {
                 $('#telefono').removeClass(' is-valid');
                 $('#telefono').addClass(' is-invalid');
                 $('#feed3').addClass('invalid-feedback');
-                $('#feed3').text('Ja, vos me queres cagar? mira que Euge te encuentra hasta en myspace eh');
+                $('#feed3').text('Ja, ¿vos me queres engañar? mira que la Euge te encuentra hasta en myspace eh');
             }
         }
 
     });
 });
+
+// Input: Provincia
+$(function () {
+    $('#provincia').on('change', function () {
+        let provincia = $(this).val();
+        let cProvincia = $('#provincia').attr('class');
+        let cantClassEmpr = cProvincia.length;
+        if (cProvincia == "form-control") {
+            if (provincia != "") {
+                $('#provincia').addClass(' is-valid');
+                $('#feed6').addClass('valid-feedback');
+                $('#feed6').text('Ah ok...');
+            } else {
+                $('#provincia').addClass(' is-invalid');
+                $('#feed6').addClass('invalid-feedback');
+                $('#feed6').text('¡Mira profe! ¡sin manos!');
+            }
+        }
+
+        if (cProvincia == "form-control is-valid" || cProvincia == "form-control is-invalid") {
+            if (cantClassEmpr == 23) {
+                if (provincia != "") {
+                    $('#provincia').removeClass(' is-invalid');
+                    $('#feed6').removeClass('invalid-feedback');
+                    $('#provincia').addClass(' is-valid');
+                    $('#feed6').addClass('valid-feedback');
+                    $('#feed6').text('Ah ok...');
+                }
+            }
+            if (cantClassEmpr == 21) {
+                console.log("entre aca");
+                $('#provincia').removeClass(' is-valid');
+                $('#provincia').addClass(' is-invalid');
+                $('#feed6').addClass('invalid-feedback');
+                $('#feed6').text('¡Mira profe! ¡sin manos!');
+            }
+        }
+
+    });
+});
+
 // Input: email
 $(function () {
     $('#mail').on('change', function () {
@@ -226,11 +268,11 @@ $(function () {
             if (regex.test(mail)) {
                 $('#mail').addClass(' is-valid');
                 $('#feed4').addClass('valid-feedback');
-                $('#feed4').text('Uff que lindo mail, te lo hiciste en el 2006? .');
+                $('#feed4').text('Uff que lindo mail, ¿te lo hiciste en el 2006?');
             } else {
                 $('#mail').addClass(' is-invalid');
                 $('#feed4').addClass('invalid-feedback');
-                $('#feed4').text('Como vas a ingresar esto? ta loquito vo?');
+                $('#feed4').text('¿Cómo vas a ingresar esto? ¿ta loquito vo?');
             }
         }
 
@@ -241,7 +283,7 @@ $(function () {
                     $('#feed4').removeClass('invalid-feedback');
                     $('#mail').addClass(' is-valid');
                     $('#feed4').addClass('valid-feedback');
-                    $('#feed4').text('Uff que lindo mail, te lo hiciste en el 2006? .');
+                    $('#feed4').text('Uff que lindo mail, ¿te lo hiciste en el 2006?');
                 }
             }
             if (cantClassMail == 21) {
@@ -249,12 +291,13 @@ $(function () {
                 $('#feed4').removeClass('valid-feedback');
                 $('#mail').addClass(' is-invalid');
                 $('#feed4').addClass('invalid-feedback');
-                $('#feed4').text('Como vas a ingresar esto? ta loquito vo?');
+                $('#feed4').text('¿Cómo vas a ingresar esto? ¿ta loquito vo?');
             }
         }
 
     });
 });
+
 // Input: Comentario
 $(function () {
     $('#comentario').on('change', function () {
@@ -269,7 +312,7 @@ $(function () {
             } else {
                 $('#comentario').addClass(' is-invalid');
                 $('#feed5').addClass('invalid-feedback');
-                $('#feed5').text('Che, no seas asi, escribi algo. SI, A VOS TE HABLO, DALE.');
+                $('#feed5').text('Che, no seas así, escribi algo. SI, A VOS TE HABLO, DALE');
             }
         }
 
@@ -288,10 +331,9 @@ $(function () {
                 $('#feed5').removeClass('valid-feedback');
                 $('#comentario').addClass(' is-invalid');
                 $('#feed5').addClass('invalid-feedback');
-                $('#feed5').text('Che, no seas asi, escribi algo. SI, A VOS TE HABLO, DALE.');
+                $('#feed5').text('Che, no seas así, escribi algo. SI, A VOS TE HABLO, DALE');
             }
         }
-
     });
 });
 
@@ -377,5 +419,64 @@ $(function () {
         var pageId = $(this).attr("id");
         loadData(pageId);
         //SELECT * FROM users LIMIT $offset, $limit
+    });
+});
+
+
+/* --EJERCICIO 6-- */
+
+$("#provincia").on("keyup", () => {
+    $("datalist#listPro").empty();
+    var value = $("#provincia").val();
+    $.ajax({
+        type: "GET",
+        url: "./listaProvincias.php",
+        data: { inicial: value },
+        success: (listaPro) => {
+            var list = JSON.parse(listaPro);
+            list.forEach((provincia) => {
+                $("datalist#listPro").append("<option value='" + provincia.descripcion + "'>" + provincia.descripcion + "</option>");
+            });
+        },
+    });
+});
+
+
+/* --SUBMIT-- */
+$(function () {
+    $('#submit').on('click', function () {
+        console.log('hola juana de arco');
+        let classNombreVal = $('#nombre').attr('class');
+        let classEmpresaVal = $('#empresa').attr('class');
+        let classTelefonoVal = $('#telefono').attr('class');
+        let classEmailVal = $('#mail').attr('class');
+        let classComentarioVal = $('#comentario').attr('class');
+
+        let NombreVal = $('#nombre').val();
+        let EmpresaVal = $('#empresa').val();
+        let TelefonoVal = $('#telefono').val();
+        let EmailVal = $('#mail').val();
+        let ComentarioVal = $('#comentario').val();
+
+        if (
+            classNombreVal == "form-control is-valid" &&
+            classEmpresaVal == "form-control is-valid" &&
+            classTelefonoVal == "form-control is-valid" &&
+            classEmailVal == "form-control is-valid" &&
+            classComentarioVal == "form-control is-valid"
+        ) {
+            $.ajax({
+                type: "POST",
+                url: "./submitConfig.php",
+                data: { nombre: NombreVal, empresa: EmpresaVal, telefono: TelefonoVal, mail: EmailVal, comentario: ComentarioVal },
+                success: function (exito) {
+                    if (exito == 1) {
+                        location.href = "./ok.html?mensaje=salio_todo_piola_wachin";
+                    } else {
+                        location.href = "./ok.html?mensaje=salio_todo_mal";
+                    }
+                }
+            })
+        }
     });
 });

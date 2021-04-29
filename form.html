@@ -6,13 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- AGREGADO POR: MANUSH-->
-    <!-- Boostrap-->
     <!-- Mi CSS Customizado -->
-    <link type="text/css" rel="stylesheet" href="css/custom.css" />
+    <link type="text/css" rel="stylesheet" href="css/reducido.css" />
 
     <!-- Título -->
-    <title>Formulario Ej. 4</title>
+    <title>Formulario 4</title>
 </head>
 
 <body>
@@ -60,7 +58,7 @@
     <!-- Navbar -->
 
     <!-- Ejercicios -->
-    <section class="pt-3 pt-md-5">
+    <section id="ejercicios" class="pt-3 pt-md-5">
         <div class="container">
             <div class="row">
                 <ul class="nav nav-pills justify-content-center">
@@ -77,13 +75,13 @@
                         <a class="nav-link" href="lesiones.html">Ejercicio 4</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="karate.html">Ejercicio 5</a>
+                        <a class="nav-link" href="karate.html">Ejercicio 5</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="peliculas.html">Ejercicio 6</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="form.html">Form</a>
+                        <a class="nav-link active" aria-current="page" href="form.html">Form</a>
                     </li>
                 </ul>
             </div>
@@ -92,47 +90,48 @@
     <!-- Ejercicios -->
 
     <!-- Section Ejercicio 4 tp2 -->
-    <!-- AGREGADO POR: MANUSH-->
     <section class="pt-3 pt-md-5 pb-3 pb-md-5">
         <div class="container form">
-            <form class="row g-3">
+            <form class="row g-3" action="#" method="POST">
                 <div class="col-md-6 p-3">
-                    <label for="nombre" class="form-label">Nombre(Usuario): </label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su usuario aqui" required>
-                    <!--  <div class="valid-feedback"> -->
+                    <label for="nombre" class="form-label">Nombre (Usuario): </label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre de usuario"
+                        required>
                     <div id="feed1" class=""></div>
                 </div>
                 <div class="col-md-6 p-3">
                     <label for="empresa" class="form-label">Empresa: </label>
-                    <input type="text" class="form-control" id="empresa" placeholder="Ingrese su empresa aqui"
+                    <input type="text" class="form-control" id="empresa" placeholder="Ingrese el nombre de la empresa"
                         maxlength="50" required>
                     <div id="feed2" class=""></div>
                 </div>
                 <div class="col-md-4 p-3">
-                    <label for="telefono" class="form-label">Telefono: </label>
+                    <label for="telefono" class="form-label">Teléfono: </label>
                     <input type="text" class="form-control" id="telefono"
-                        placeholder="dejame tu telefono aca, baby (solo numero)" maxlength="20" required>
+                        placeholder="Baby dejame tu teléfono acá (solo número)" maxlength="20" required>
                     <div id="feed3" class=""></div>
                 </div>
                 <div class="col-md-4 p-3">
-                    <label for="pais" class="form-label">Pais: </label>
-                    <input type="text" class="form-control" id="pais" placeholder="dejame tu pais aca" maxlength="20"
-                        required>
-                    <div id="feed3" class=""></div>
+                    <label for="provincia" class="form-label">Provincia: </label>
+                    <input type="text" class="form-control" id="provincia" list="listPro"
+                        placeholder="Ingrese una provincia" maxlength="20" required>
+                    <datalist id="listPro"></datalist>
+                    <div id="feed6" class=""></div>
                 </div>
                 <div class="col-md-4 p-3">
                     <label for="mail" class="form-label">Email: </label>
                     <input type="email" class="form-control" id="mail"
-                        placeholder="Dejame tu email aca, capas te escribo..." required>
+                        placeholder="Dejame tu email acá, capaz te escribo..." required>
                     <div id="feed4" class=""></div>
                 </div>
                 <div class="col-md-12 p-3">
                     <label for="comentario" class="form-label">Comentario: </label>
-                    <textarea class="form-control" id="comentario" required></textarea>
+                    <textarea class="form-control" id="comentario" placeholder="Dejame tu CVU acá, capaz te contrato..."
+                        required></textarea>
                     <div id="feed5" class=""></div>
                 </div>
                 <div class="col-12 p-5">
-                    <button class="btn btn-dark" id="submit" type="submit">Enviar</button>
+                    <button class="btn btn-dark" id="submit" type="button">Enviar</button>
                     <button class="btn btn-dark" id="reset" type="reset">Reset</button>
                 </div>
             </form>
@@ -140,7 +139,7 @@
     </section>
 
 
-    <!-- Section Ejercicio 5 -->
+    <!-- Section Ejercicio 4 tp2 -->
 
     <!-- Footer -->
     <footer class="bg-dark text-white">

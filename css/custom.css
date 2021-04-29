@@ -11821,4 +11821,48 @@ footer a {
 #ejercicios li.nav-item a:hover {
   color: #40e0d0;
 }
+
+/** PAGINATION **/
+#tabla .pagination {
+  padding-left: 0;
+  list-style: none;
+  background-color: #cd853f;
+}
+
+#tabla .page-item:not(:first-child) .page-link {
+  margin-left: -1px;
+}
+
+#tabla .page-item:first-child .page-link {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#tabla .page-item:last-child .page-link {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#tabla .page-link {
+  position: relative;
+  display: block;
+  color: #0e0e0e;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 0;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+#tabla .page-link:hover {
+  color: #90ee90;
+  background-color: #0e0e0e;
+}
+
+#tabla .page-item.active .page-link {
+  color: #90ee90;
+  background-color: #0e0e0e;
+}
 /*# sourceMappingURL=custom.css.map */
