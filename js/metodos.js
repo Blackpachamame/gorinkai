@@ -481,3 +481,11 @@ $(function () {
         });
     });
 });
+
+
+/** OK - TOAST **/
+$(function () {
+    $("#myBtn").on('click', function () {
+        $('.toast').toast('show');
+    });
+});

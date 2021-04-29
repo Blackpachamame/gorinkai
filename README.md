@@ -1,31 +1,30 @@
-# PWA - Trabajo Práctico N°1 (Mejorado)
+# PWA - Trabajo Práctico N°2
 
-Este repositorio contiene una página web creada a partir de las consignas del trabajo práctico 1 de Programación Web Avanzada. Con este TP buscamos introducirnos al uso de las facilidades provistas por el framework front-end: Bootstrap.
+## AJAX y jQuery (Parte 1 y Parte 2)
+
+Este repositorio contiene una página web creada a partir de las consignas de los trabajos prácticos de Programación Web Avanzada.
 
 ## Tabla de contenido
 
 - [Descripción](#descripción)
-  - [Obejtivo](#objetivo)
-  - [Mejora](#mejora)
+  - [Objetivo](#objetivo)
   - [Links](#links)
 - [Mi Procedimiento](#mi-procedimiento)
   - [Construido con](#construido-con)
-  - [Lo que aprendí](#lo-que-aprendí)
+  - [Lo que aprendmos](#lo-que-aprendmos)
   - [Problemas y soluciones](#problemas-y-soluciones)
-  - [Desarrollo continuo](#desarrollo-continuo)
   - [Recursos útiles](#recursos-útiles)
 
 ## Descripción
 
+<em>Nombre del grupo:</em> The Condicionales
+<em>Participantes:</em> María Eugenia Garcia, Manuel Ortiz, Marcos Andrés Travaglini
+<em>Carrera:</em> Tecnicatura Universitaria en Desarrollo Web
+<em>Materia:</em> Programación Web Avanzada
+
 ### Objetivo
 
-El objetivo de este conjunto de prácticas es introducirnos al uso de las
-facilidades provistas por el framework, entendiendo el entorno y mediante
-respuesta responsive, con una temática asociada elegida a discreción.
-
-### Mejora
-
-Como segundo objetivo nos proponemos customizar nuestro CSS. Para esto haremos uso de SASS, node.js y PurgeCSS.
+El objetivo de este práctico es realizar una primera aproximación a la programación mediante AJAX y jQuery para identificar y aprovechar las ventajas de la programación asíncrona.
 
 ### Links
 
@@ -37,46 +36,23 @@ Como segundo objetivo nos proponemos customizar nuestro CSS. Para esto haremos u
 
 - HTML5
 - CSS3
-- SASS
-- Flexbox
+- Jquery
+- Json
 - Bootstrap 5
-- Node.js
-- PurgeCSS
+- PHP
 - Visual Studio Code
 
-### Lo que aprendí
+### Lo que aprendmos
 
-- Bootstrap 5
-- SASS (lo básico: anidación, @extent, @mixin, @include)
-- Descargar Bootstrap con node.js
-- Customizar mi CSS con SASS
-- Minimizar mi CSS con PurgeCSS
+- Cargar contenido de forma dinámica utilizando AJAX
+- Validar que el usuario ingresado no exista en la base de datos usando AJAX
+- Repositorio compartido (Git/Github): Fork, Pull request, Branch y Marge
 
 ### Problemas y soluciones
 
-1. Mi `package.json` era diferente al que la profesora mostro en la clase.
-
-<em>Solución</em>: Esto fue porque no menciono el primer paso que era crear/iniciar el `package.json`. Para esto solo ponemos el siguiente comando en la consola: `npm init -y`
-
-2. Creación de CSS customizados en la misma carpeta que mi SCSS. En este caso esto no es realmente un problema, pero es desorganizado y desprolijo.
-
-<em>Solución</em>: Para solucionarlo tuve que modificar las configuraciones de formart del compilador de SASS (extensión en VSC: Live Sass Compiler) y modificar esta línea `"savePath": null` por `"savePath": "/css"`. Esto hace que al compilar mi scss lo haga dentro de una carpeta llamada css. Sin embargo, hay que tener en cuenta que para que funcione correctamente, tu proyecto en el área de trabajo de VSC debe ser el que esté por encima de todos (si es que tenes más proyectos), de otra forma te crea los archivos css en una carpeta dentro del proyecto que esté por encima de los demás.
-
-3. El CSS de Bootstrap pisaba las clases modificadas en mi propio CSS.
-
-<em>Solución</em>: Para evitar esto hay que colocar el css propio por debajo del `@import` de bootstrap en el `custom.scss`.
-
-4. El PurgeCSS solo se aplicaba a mi index.html.
-
-<em>Solución</em>: Esto era porque estaba aplicando la purga solo al index en lugar de aplicarlo a todos mis .html: `"build": "purgecss --css css/custom.css --content index.html -o css/reducido.css"`. Para aplicarlo a todos los html solo cambie `index.html` por `*.html`.
-
-### Desarrollo continuo
-
-Había escuchado sobre SASS infinidad de veces, pero nunca me anime a probar qué tal era. En esta ocasión, aprovechando que usaríamos SASS para reducir el CSS de bootstrap, me puse a investigar un poco para aprender lo básico y ponerlo en práctica por primera vez. Me pareció sensacional porque simplifica mucho las cosas.
-
-En el futuro la idea es hacer el 100% de mi CSS con SASS.
+Encontrar un forma de organización y la encontramos con Github.
 
 ### Recursos útiles
 
-- [Manual de SASS](https://uniwebsidad.com/libros/sass/capitulo-1)
-- [Documentación de Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Fork y Pull request de Github](https://www.youtube.com/watch?v=xl3nxfbGkzY)
+- [Branch y Merge en Github](https://www.youtube.com/watch?v=tFr0Vg1q9Eg&t=689s)
