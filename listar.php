@@ -1,45 +1,61 @@
 <?php
 
-//obtengo valores para la paginacion | intval — Obtiene el valor entero de una variable | isset — Determina si una variable está definida y no es null
-$limit = isset($_POST["limit"]) && intval($_POST["limit"]) > 0 ? intval($_POST["limit"]) : 10;
-$offset= isset($_POST["offset"]) && intval($_POST["offset"]) >= 0 ? intval($_POST["offset"]) : 0;
+// Connect database 
+require_once('conexion.php');
+$mysqli = conectar();
 
-//conexion
-$con = new mysqli("localhost", "root", "root", "paginacion");
-$con->set_charset("utf8"); // el set_charset Establece el conjunto de caracteres predeterminado a usar cuando se envían datos desde y hacia el servidor de la base de datos.
+$limit = 5;
 
-//------------------------
-$json = array();
-$data = array();
-
-//consulta bd
-$query = $con->prepare("SELECT indice, nombre, descripcion FROM tabla limit ? offset ? ");
-$query->bind_param("ii", $limit, $offset); //"ii" significa que los dos parámetros de la consulta SQL serán del tipo "Integer" representados por "i" cada uno.
-//db2_bind_param — Vincula una variable PHP a un parámetro de una sentencia SQL
-$query->execute();
-
-//vincular variables a la sentencia preparada (a una declaración preparada para el almacenamiento de resultados)
-$query->bind_result($indice, $nombre, $descripcion); 
-
-//valores
-
-while ($qeury->fetch()){
-    $data_json = array();
-    $data_json["indice"] = $indice;
-    $data_json["nombre"] = $nombre;
-    $data_json["descripcion"] = $descripcion;
-    $data[]= $data_json;
+if (isset($_POST['page_no'])) {
+    $page_no = $_POST['page_no'];
+} else {
+    $page_no = 1;
 }
 
-//numero de registros
-$cantidad_consulta = $con->query("SELECT COUNT(*) AS total FROM tabla");
-$row= $cantidad_consulta->fetch_assoc();
-$cantidad['cantidad']= $row['total'];
-$json["lista"] = array_values($data);
-$json["cantidad"] = array_values($cantidad);
+$offset = ($page_no - 1) * $limit;
+$sql = "SELECT * FROM tabla LIMIT $offset, $limit";
+$result = $mysqli->query($sql);
+$output = "";
 
-//enviar rta por json para realizar un peticion por ajax
-header ("Content-type:application/json; charset = utf-8");
-echo json_encode($json);
-//json_encode — Retorna la representación JSON del valor dado
-exit();
+if (mysqli_num_rows($result) > 0) {
+
+    $output .= "<table class='table'>
+		    <thead>
+		        <tr>
+		           <th>Indice</th>
+    	           <th>Nombre</th>
+			       <th>Descripcion</th>
+	                 </tr>
+		    </thead>
+	         <tbody>";
+    while ($row = mysqli_fetch_assoc($result)) {
+
+        $output .= "<tr>
+	            <td>{$row['indice']}</td>
+	            <td>{$row['nombre']}</td>
+	            <td>{$row['descripcion']}</td>
+		 </tr>";
+    }
+    $output .= "</tbody>
+		</table>";
+
+    $sql2 = "SELECT * FROM tabla";
+
+    // Vuelve a mostrar error con esta funcion predeficinida
+    $records = $mysqli->query($sql2);
+    $totalRecords = mysqli_num_rows($records);
+    $totalPage = ceil($totalRecords / $limit);
+
+    $output .= "<ul class='pagination justify-content-center' style='margin:20px 0'>";
+
+    for ($i = 1; $i <= $totalPage; $i++) {
+        if ($i == $page_no) {
+            $active = "active";
+        } else {
+            $active = "";
+        }
+        $output .= "<li class='page-item $active'><a class='page-link' id='$i' href=''>$i</a></li>";
+    }
+    $output .= "</ul>";
+    echo $output;
+}

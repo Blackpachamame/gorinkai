@@ -95,19 +95,15 @@ Damos una devolucion en el form.
 */
 $(function () {
     $('#nombre').on('change', function () {
-        console.log("entre");
         let username = $(this).val();
         let dataString = 'username=' + username;
-
         $.ajax({
             type: "POST",
             url: "./formConfig.php",
             data: dataString,
             success: function (data) {
-                console.log(data);
                 cant = data.length;
-                console.log("hay tantas cosas " + cant);
-                if (data != []) {
+                if (cant != 2) {
                     $('#nombre').addClass(' is-valid');
                     $('#feed1').addClass('valid-feedback');
                     $('#feed1').text('Nombre valido :D eso quiere decir que nadie se le ocurrio semejante boludez.');
@@ -120,6 +116,7 @@ $(function () {
         });
     });
 });
+
 
 $(function () {
     $('#empresa').on('change', function () {
@@ -189,90 +186,27 @@ $(function () {
 });
 
 
-
-
-
-//AJAX con POST
-// $(function () {
-//     // Paginador e items por página
-//     paginador = $(".paginador"); //clase paginador
-//     var items = 3, numeros = 4;
-//     // Inicio paginador y envio por ajax para realizar la callback
-//     init_paginator(paginador, items, numeros);
-//     set_callback(get_data_callback_tabla_top);
-//     cargaPagina(0);
-// });
-
-// Petición enviada como callback
-// function get_data_callback_tabla_top() {
-//     $.ajax({
-//         data: {
-//             limit: itemsPorPagina,
-//             offset: desde,
-//         },
-//         type: "POST",
-//         url: url_listar_tabla
-//     }).done(function (data, textStatus, jqXHR) {
-//         // Clave lista del json data
-//         var lista = data.lista;
-//         $("#tabla").html("");
-
-//         // Actualizar las paginas
-//         if (pagina = 0) {
-//             creaPaginador(data.cantidad);
-//         }
-//         // Genera la tbody
-//         $each(lista, function (ind, elem) {
-//             $('<tr>' +
-//                 '<td>' + elem.indice + '<td>',
-//                 '<td>' + elem.nombre + '<td>',
-//                 '<td>' + elem.descripcion + '<td>',
-//                 '<tr>').appendTO($("#tabla"));
-//         });
-//     }).fail(function (jqXHR, textStatus, textError) {
-//         alert("Error al relaizar la petición".textError);
-//     });
-// }
-//url para llamar a la peticion por ajx
-var url_listar_tabla = "./listar.php";
+/* --EJERCICIO 5-- */
 
 $(function () {
-    //paginador e items por pagina
-    paginador = $(".paginador"); //clase paginador
-    var items = 3, numeros = 4;
-    //inicio paginador y envio por ajax para realizar la callback
-    init_paginator(paginador, items, numeros);
-    set_callback(get_data_callback_tabla_top); //nombre function
-    cargaPagina(0);
-});
-
-//peticion enviada como callback
-function get_data_callback_tabla_top() {
-    $.ajax({
-        data: {
-            limit: itemsPorPagina,
-            offset: desde,
-        },
-        type: "POST",
-        url: url_listar_tabla
-    }).done(function (data, textStatus, jqXHR) {
-        //clave lista del json data
-        var lista = data.lista;
-        $("#tabla").html("");
-
-        //actualizar las paginas
-        if (pagina = 0) {
-            creaPaginador(data.cantidad);
-        }
-        //genera la tbody
-        $each(lista, function (ind, elem) {
-            $('<tr>' +
-                '<td>' + elem.indice + '<td>',
-                '<td>' + elem.nombre + '<td>',
-                '<td>' + elem.descricion + '<td>',
-                '<tr>').appendTO($("#tabla"));
+    function loadData(page) {
+        $.ajax({
+            url: "./listar.php",
+            type: "POST",
+            cache: false,
+            data: { page_no: page },
+            success: function (response) {
+                $("#tabla").html(response);
+            }
         });
-    }).fail(function (jqXHR, textStatus, textError) {
-        alert("error al relaizar la peticion".textError);
+    }
+
+    loadData();
+    // Pagination code
+    $(document).on("click", ".pagination li a", function (e) {
+        e.preventDefault();
+        var pageId = $(this).attr("id");
+        loadData(pageId);
+        //SELECT * FROM users LIMIT $offset, $limit
     });
-}
+});
