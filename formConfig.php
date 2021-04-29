@@ -2,7 +2,7 @@
 require('conexion.php');
 
 // Rescatar nombre
-//print_r($_POST);
+print_r($_POST);
 $nombreUsuario = $_POST['username'];
 $mysqli = conectar();
 $obtenerNombreUsuario = consultarNombre($nombreUsuario, $mysqli);

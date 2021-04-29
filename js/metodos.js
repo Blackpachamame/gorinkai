@@ -96,121 +96,261 @@ Damos una devolucion en el form.
 */
 $(function () {
     $('#nombre').on('change', function () {
-        console.log("entre");
         let username = $(this).val();
         let dataString = 'username=' + username;
-
+        let cNombre = $('#nombre').attr('class');
+        let cantClassNombre = cNombre.length;
         $.ajax({
             type: "POST",
             url: "./formConfig.php",
             data: dataString,
             success: function (data) {
-                console.log(data);
                 cant = data.length;
-                console.log("hay tantas cosas "+cant);
-                if(data != []){
-                    $('#nombre').addClass(' is-valid');
-                    $('#feed1').addClass('valid-feedback');
-                    $('#feed1').text('Nombre valido :D eso quiere decir que nadie se le ocurrio semejante boludez.');
-                } else {
-                    $('#nombre').addClass(' is-invalid');
-                    $('#feed1').addClass('invalid-feedback');
-                    $('#feed1').text('Un poquito mas original, no? dale, pensa un poquito, no hace mal.');
+                if(cNombre == "form-control"){    
+                    if(cant != 2){
+                        $('#nombre').addClass(' is-valid');
+                        $('#feed1').addClass('valid-feedback');
+                        $('#feed1').text("Justo, justo, ese esta disponible");
+                    }if(cant == 2){
+                        $('#nombre').addClass(' is-invalid');
+                        $('#feed1').addClass('invalid-feedback');
+                        $('#feed1').text('Uh! te ganaron de mano, proba con otro a ver si tenes suerte');
+                    }
+                }
+                if(cNombre == "form-control is-valid" || cNombre == "form-control is-invalid" ){
+                    if(cantClassNombre == 23){
+                        $('#nombre').removeClass(' is-invalid');
+                        $('#feed1').removeClass('invalid-feedback');
+                        $('#nombre').addClass(' is-valid');
+                        $('#feed1').addClass('valid-feedback');
+                        $('#feed1').text("Justo, justo, ese esta disponible");
+                    }
+
+                    if(cantClassNombre == 21){
+                        $('#nombre').removeClass(' is-valid');
+                        $('#nombre').addClass(' is-invalid');
+                        $('#feed1').addClass('invalid-feedback');
+                        $('#feed1').text('Uh! te ganaron de mano, proba con otro a ver si tenes suerte');
+                    }
                 }
             }
         });
     });
 });
 
+// Input: Empresa
 $(function () {
     $('#empresa').on('change', function () {
-        console.log("entre por la empresa POR LA EMPRESA SIIIIII");
         let empresa = $(this).val();
-        if(empresa != ""){
-            $('#empresa').addClass(' is-valid');
-            $('#feed2').addClass('valid-feedback');
-            $('#feed2').text('Muy bien! espero que te tengan en blanco');
-        } else {
-            $('#empresa').addClass(' is-invalid');
-            $('#feed2').addClass('invalid-feedback');
-            $('#feed2').text('PONE ALGO FORRO, DALE, DALE, AGUANTE INTOXICADOS');
+        let cEmpresa = $('#empresa').attr('class');
+        let cantClassEmpr = cEmpresa.length;
+        if(cEmpresa == "form-control"){
+            if(empresa != ""){
+                $('#empresa').addClass(' is-valid');
+                $('#feed2').addClass('valid-feedback');
+                $('#feed2').text('Muy bien! espero que te tengan en blanco');
+            } else {
+                $('#empresa').addClass(' is-invalid');
+                $('#feed2').addClass('invalid-feedback');
+                $('#feed2').text('PONE ALGO FORRO, DALE, DALE, AGUANTE INTOXICADOS');
+            }
         }
+
+        if(cEmpresa == "form-control is-valid" || cEmpresa == "form-control is-invalid" ){
+            if(cantClassEmpr == 23){
+                if(empresa != ""){
+                    $('#empresa').removeClass(' is-invalid');
+                    $('#feed2').removeClass('invalid-feedback');
+                    $('#empresa').addClass(' is-valid');
+                    $('#feed2').addClass('valid-feedback');
+                    $('#feed2').text('Muy bien! espero que te tengan en blanco');
+                }
+            }
+                if(cantClassEmpr == 21){
+                    console.log("entre aca");
+                    $('#empresa').removeClass(' is-valid');
+                    $('#empresa').addClass(' is-invalid');
+                    $('#feed2').addClass('invalid-feedback');
+                    $('#feed2').text('PONE ALGO FORRO, DALE, DALE, AGUANTE INTOXICADOS');
+                }
+            }
+            
     });
 });
-
-
+// Input: Telefono
 $(function () {
     $('#telefono').on('change', function () {
-        console.log("entre por el telefono HOY SE COME FAMILIA.");
         let telefono = $(this).val();
         let regex = /^([0-9])*$/;
-        if(regex.test(telefono)){
-            $('#telefono').addClass(' is-valid');
-            $('#feed3').addClass('valid-feedback');
-            $('#feed3').text('Listo, esta noche te llamo.');
-        } else {
-            $('#telefono').addClass(' is-invalid');
-            $('#feed3').addClass('invalid-feedback');
-            $('#feed3').text('Ja, vos me queres cagar? mira que Euge te encuentra hasta en myspace eh');
+         let cTel = $('#telefono').attr('class');
+        let cantClassTel = cTel.length;
+        if(cTel == "form-control"){
+            if(regex.test(telefono)){
+                $('#telefono').addClass(' is-valid');
+                $('#feed3').addClass('valid-feedback');
+                $('#feed3').text('Listo, esta noche te llamo.');
+            } else {
+                $('#telefono').addClass(' is-invalid');
+                $('#feed3').addClass('invalid-feedback');
+                $('#feed3').text('Ja, vos me queres cagar? mira que Euge te encuentra hasta en myspace eh');
+            }
         }
+
+        if(cTel == "form-control is-valid" || cTel == "form-control is-invalid" ){
+            if(cantClassTel == 23){
+                if(regex.test(telefono)){
+                    $('#telefono').removeClass(' is-invalid');
+                    $('#feed3').removeClass('invalid-feedback');
+                    $('#telefono').addClass(' is-valid');
+                    $('#feed3').addClass('valid-feedback');
+                    $('#feed3').text('Listo, esta noche te llamo.');
+                }
+            }
+                if(cantClassTel == 21){
+                    $('#telefono').removeClass(' is-valid');
+                    $('#telefono').addClass(' is-invalid');
+                    $('#feed3').addClass('invalid-feedback');
+                    $('#feed3').text('Ja, vos me queres cagar? mira que Euge te encuentra hasta en myspace eh');
+                }
+            }
+            
     });
 });
-
+// Input: email
 $(function () {
     $('#mail').on('change', function () {
-        console.log("FUA UN MAAAIL, EUGENIA PREPARA LA TARTA EUGENIA.");
         let mail = $(this).val();
         let regex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-        if(regex.test(mail)){
-            $('#mail').addClass(' is-valid');
-            $('#feed4').addClass('valid-feedback');
-            $('#feed4').text('Uff que lindo mail, te lo hiciste en el 2006? .');
-        } else {
-            $('#mail').addClass(' is-invalid');
-            $('#feed4').addClass('invalid-feedback');
-            $('#feed4').text('Como vas a ingresar esto? ta loquito vo?');
+         let cMail = $('#mail').attr('class');
+        let cantClassMail = cMail.length;
+        if(cMail == "form-control"){
+            if(regex.test(mail)){
+                $('#mail').addClass(' is-valid');
+                $('#feed4').addClass('valid-feedback');
+                $('#feed4').text('Uff que lindo mail, te lo hiciste en el 2006? .');
+            } else {
+                $('#mail').addClass(' is-invalid');
+                $('#feed4').addClass('invalid-feedback');
+                $('#feed4').text('Como vas a ingresar esto? ta loquito vo?');
+            }
         }
+
+        if(cMail == "form-control is-valid" || cMail == "form-control is-invalid" ){
+            if(cantClassMail == 23){
+                if(regex.test(mail)){
+                    $('#mail').removeClass(' is-invalid');
+                    $('#feed4').removeClass('invalid-feedback');
+                    $('#mail').addClass(' is-valid');
+                    $('#feed4').addClass('valid-feedback');
+                    $('#feed4').text('Uff que lindo mail, te lo hiciste en el 2006? .');
+                }
+            }
+                if(cantClassMail == 21){
+                    $('#mail').removeClass(' is-valid');
+                    $('#feed4').removeClass('valid-feedback');
+                    $('#mail').addClass(' is-invalid');
+                    $('#feed4').addClass('invalid-feedback');
+                    $('#feed4').text('Como vas a ingresar esto? ta loquito vo?');
+                }
+            }
+            
     });
 });
-
+// Input: Comentario
 $(function () {
     $('#comentario').on('change', function () {
-        console.log("entre por el comentario COMENTARIO ESFERICO.");
-        let coment = $(this).val();
-        if(coment != ""){
-            $('#comentario').addClass(' is-valid');
-            $('#feed5').addClass('valid-feedback');
-            $('#feed5').text('Muy bien, ahora gracias a esto, Krillin no morira en la proxima saga de DB.');
-        } else {
-            $('#comentario').addClass(' is-invalid');
-            $('#feed5').addClass('invalid-feedback');
-            $('#feed5').text('Dale ingresa algo, no seas asi.');
+        let comentario = $(this).val();
+        let cComentario = $('#comentario').attr('class');
+        let cantClassComentario = cComentario.length;
+        if(cComentario == "form-control"){
+            if(comentario != ""){
+                $('#comentario').addClass(' is-valid');
+                $('#feed5').addClass('valid-feedback');
+                $('#feed5').text('Gracias por tu comentario :D');
+            } else {
+                $('#comentario').addClass(' is-invalid');
+                $('#feed5').addClass('invalid-feedback');
+                $('#feed5').text('Che, no seas asi, escribi algo. SI, A VOS TE HABLO, DALE.');
+            }
         }
+
+        if(cComentario == "form-control is-valid" || cComentario == "form-control is-invalid" ){
+            if(cantClassComentario == 23){
+                if(comentario != ""){
+                    $('#comentario').removeClass(' is-invalid');
+                    $('#feed5').removeClass('invalid-feedback');
+                    $('#comentario').addClass(' is-valid');
+                    $('#feed5').addClass('valid-feedback');
+                    $('#feed5').text('Gracias por tu comentario :D');
+                }
+            }
+                if(cantClassComentario == 21){
+                    $('#comentario').removeClass(' is-valid');
+                    $('#feed5').removeClass('valid-feedback');
+                    $('#comentario').addClass(' is-invalid');
+                    $('#feed5').addClass('invalid-feedback');
+                    $('#feed5').text('Che, no seas asi, escribi algo. SI, A VOS TE HABLO, DALE.');
+                }
+            }
+            
     });
 });
 
 
+// Btn : Reset
+$(function () {
+    $('#reset').on('click', function () {
 
+        // Reseteo de la clase Nombre.
+        let classNombre = $('#nombre').attr('class');
 
+        if(classNombre == "form-control is-valid"){
+            $('#nombre').removeClass(' is-valid');
+        } 
+        
+        if(classNombre == "form-control is-invalid"){
+            $('#nombre').removeClass(' is-invalid');
+        }
 
-//AJAX con POST
-// $(function () {
-//     // Capturamos el evento change del select con id "libro"
-//     $('#username').on('change', function () {
-//         // Guardamos en una variable el select con id "capitulo"
-//         var resultUsername = $("#result-username");
-//         // Obtenemos el valor de libro
-//         var nombre = this.value;
-//         // Enviamos el post a la base de datos
-//         $.post('./formConfig.php', { nombre: nombre }, function (data) {
-//             // each = foreach
-//             $.each(data, function (index, data) {
-//                 var option = $('<option></option>');
-//                 option.attr('value', data.id);
-//                 option.text(data.nombre);
-//                 resultUsername.append(option);
-//             });
-//             console.log(data);
-//         }, 'json');
-//     });
-// });
+        // Reseteo de la clase Empresa.
+        let classEmpresa = $('#empresa').attr('class');
+
+        if(classEmpresa == "form-control is-valid"){
+            $('#empresa').removeClass(' is-valid');
+        }        
+        
+        if(classEmpresa == "form-control is-invalid"){
+            $('#empresa').removeClass(' is-invalid');
+        }
+
+        // Reseteo de la clase Telefono.
+        let classTelefono = $('#telefono').attr('class');
+
+        if(classTelefono == "form-control is-valid"){
+            $('#telefono').removeClass(' is-valid');
+        }         
+        if(classTelefono == "form-control is-invalid"){
+            $('#telefono').removeClass(' is-invalid');
+        }
+
+        // Reseteo de la clase Email.
+        let classEmail = $('#mail').attr('class');
+
+        if(classEmail == "form-control is-valid"){
+            $('#mail').removeClass(' is-valid');
+        }
+        if(classEmail == "form-control is-invalid"){
+            $('#mail').removeClass(' is-invalid');
+        }
+
+        // Reseteo de la clase Comentario.
+        let classComentario = $('#comentario').attr('class');
+
+        if(classComentario == "form-control is-valid"){
+            $('#comentario').removeClass(' is-valid');
+        }
+        if(classComentario == "form-control is-invalid"){
+            $('#comentario').removeClass(' is-invalid');
+        }
+    })
+})
