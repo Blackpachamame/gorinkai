@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "purgecss --css css/custom.css --content *.html -o css/reducido.css"
+    "build": "purgecss --css css/custom.css --content *.html *js *php -o css/reducido.css"
   },
   "repository": {
     "type": "git",
