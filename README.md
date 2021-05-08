@@ -29,7 +29,7 @@ El objetivo de este práctico es realizar una primera aproximación a la program
 
 ### Links
 
-- [URL del sitio en vivo](https://blackpachamame.github.io/pwa-tp1/)
+- [URL del sitio en vivo](https://blackpachamame.github.io/gorinkai/)
 - [Página inspirada en un sitio web antiguo](http://www.gorinkai.com/)
 
 ## Mi Procedimiento
