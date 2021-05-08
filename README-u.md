@@ -1,6 +1,10 @@
 # PWA - Instalar Docker (Windows 10 - Home)
 
-Para instalar Docker en Windows 10 en su versión Home debe seguir los siguientes pasos.
+> #### GoRinKai
+>
+> Un Ser Humano debería ser capaz de cambiar un pañal, planear una invasión, despiezar un cerdo, ensamblar una barca, diseñar un edificio, escribir un soneto, hacer un balance, levantar una pared, expresarse en otro idioma, remendar un hueso roto, confortar a un moribundo, obedecer órdenes, dar órdenes, cooperar, actuar en solitario, resolver ecuaciones, analizar un nuevo problema, esparcir estiércol, manejar un ordenador, cocinar una comida sabrosa, sufrir con entereza, luchar eficientemente. La especialización es para los insectos.
+>
+> By _Robert A. Heinlein_
 
 ## Tabla de contenido
 
@@ -19,7 +23,7 @@ Para instalar Docker en Windows 10 en su versión Home debe seguir los siguiente
 
 ## Pasos Previos
 
-Probablemente deban reiniciar su pc en cada paso.
+Para instalar Docker en Windows 10 en su versión Home debe seguir los siguientes pasos. Probablemente deban reiniciar su pc en cada paso.
 
 ### Requisitos del sistema
 
@@ -76,9 +80,3 @@ Ahora solo queda ir a la configuración de <em>Docker >> Resources >> WSL Integr
 - [Windows Subsystem for Linux Installation Guide for Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 - [How to Install WSL 2 on Windows 10 - Updated](https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10)
 - [The Ultimate Guide to Windows Subsystem for Linux](https://adamtheautomator.com/windows-subsystem-for-linux/)
-
-> #### GoRinKai
->
-> Un Ser Humano debería ser capaz de cambiar un pañal, planear una invasión, despiezar un cerdo, ensamblar una barca, diseñar un edificio, escribir un soneto, hacer un balance, levantar una pared, expresarse en otro idioma, remendar un hueso roto, confortar a un moribundo, obedecer órdenes, dar órdenes, cooperar, actuar en solitario, resolver ecuaciones, analizar un nuevo problema, esparcir estiércol, manejar un ordenador, cocinar una comida sabrosa, sufrir con entereza, luchar eficientemente. La especialización es para los insectos.
->
-> By _Robert A. Heinlein_
