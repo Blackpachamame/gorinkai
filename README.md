@@ -11,7 +11,7 @@ Este repositorio contiene una página web (Go Rin Kai) creada a partir de las co
   - [Links](#links)
 - [Mi Procedimiento](#mi-procedimiento)
   - [Construido con](#construido-con)
-  - [Lo que aprendmos](#lo-que-aprendmos)
+  - [Lo que aprendimos](#lo-que-aprendimos)
   - [Problemas y soluciones](#problemas-y-soluciones)
   - [Recursos útiles](#recursos-útiles)
 
@@ -44,7 +44,7 @@ El objetivo de este práctico es realizar una primera aproximación a la program
 - PHP
 - Visual Studio Code
 
-### Lo que aprendmos
+### Lo que aprendimos
 
 - Cargar contenido de forma dinámica utilizando AJAX
 - Validar que el usuario ingresado no exista en la base de datos usando AJAX
