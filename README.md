@@ -17,11 +17,11 @@ Este repositorio contiene una página web (Go Rin Kai) creada a partir de las co
 
 ## Descripción
 
-- <em>Nombre del grupo:</em> The Condicionales
-- <em>Participantes:</em> [Eugenia Garcia](https://github.com/Eugenia-2793), [Manuel Ortiz](https://github.com/mannusho), [Marcos Andrés Travaglini](https://github.com/Blackpachamame)
-- <em>Consultor técnico:</em> [Luis Miguel Cañete](https://github.com/Venserthesojourner)
-- <em>Carrera:</em> Tecnicatura Universitaria en Desarrollo Web
-- <em>Materia:</em> Programación Web Avanzada
+- <b>Nombre del grupo:</b> The Condicionales
+- <b>Participantes:</b> [Eugenia Garcia](https://github.com/Eugenia-2793), [Manuel Ortiz](https://github.com/mannusho), [Marcos Andrés Travaglini](https://github.com/Blackpachamame)
+- <b>Consultor técnico:</b> [Luis Miguel Cañete](https://github.com/Venserthesojourner)
+- <b>Carrera:</b> Tecnicatura Universitaria en Desarrollo Web
+- <b>Materia:</b> Programación Web Avanzada
 
 ### Objetivo
 
@@ -31,6 +31,8 @@ El objetivo de este práctico es realizar una primera aproximación a la program
 
 - [URL del sitio en vivo](https://blackpachamame.github.io/gorinkai/)
 - [Página inspirada en un sitio web antiguo](http://www.gorinkai.com/)
+- [TP1 - Customizar CSS con Sass](https://github.com/Blackpachamame/gorinkai/blob/main/README-TP1.md)
+- [Instalar Docker (Windows 10 - Home)](https://github.com/Blackpachamame/gorinkai/blob/main/README-u.md)
 
 ## Mi Procedimiento
 
