@@ -2250,7 +2250,7 @@ footer a {
   background-color: #0e0e0e;
 }
 
-/* Agrego un borde sobre el navbar */
+/* Agrego un borde debajo del navbar */
 .navbar::after {
   content: "";
   position: absolute;
