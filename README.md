@@ -18,7 +18,7 @@ Este repositorio contiene una página web (Go Rin Kai) creada a partir de las co
 ## Descripción
 
 - <b>Nombre del grupo:</b> The Condicionales
-- <b>Participantes:</b> [Eugenia Garcia](https://github.com/Eugenia-2793), [Manuel Ortiz](https://github.com/mannusho), [Marcos Andrés Travaglini](https://github.com/Blackpachamame)
+- <b>Participantes:</b> [Eugenia Garcia](https://github.com/Eugenia-2793), [Manuel Ortiz](https://github.com/hctmanuelortiz), [Marcos Andrés Travaglini](https://github.com/Blackpachamame)
 - <b>Consultor técnico:</b> [Luis Miguel Cañete](https://github.com/Venserthesojourner)
 - <b>Carrera:</b> Tecnicatura Universitaria en Desarrollo Web
 - <b>Materia:</b> Programación Web Avanzada
