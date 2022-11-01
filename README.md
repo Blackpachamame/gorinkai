@@ -54,7 +54,7 @@ El objetivo de este práctico es realizar una primera aproximación a la program
 
 ### Problemas y soluciones
 
-Encontrar un forma de organización y la encontramos con Github.
+Encontrar una forma de organización y la encontramos con Github.
 
 ### Recursos útiles
 
