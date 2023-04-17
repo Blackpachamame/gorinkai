@@ -11,7 +11,7 @@ $(function () {
         // Obtenemos el valor de libro
         var idLibro = this.value;
         // Enviamos el post a la base de datos
-        $.post("./tabConfig.php", { idLibro: idLibro }, function (data) {
+        $.post("../pages/tabConfig.php", { idLibro: idLibro }, function (data) {
             // each = foreach
             $.each(data, function (index, data) {
                 var option = $("<option></option>");
@@ -31,11 +31,11 @@ $(function () {
 $(function () {
     var targetTab = '#suntzu';
     $.ajax({
-        url: './tabTextos.html',
+        url: '../pages/tabTextos.html',
         type: 'GET',
         success: function (data) {
             //Cargamos el texto por defecto dentro del div con id "myTabContent"
-            $('#myTabContent').load('./tabTextos.html div' + targetTab);
+            $('#myTabContent').load('../pages/tabTextos.html div' + targetTab);
         }
     });
 });
@@ -47,10 +47,10 @@ $(function () {
         // Guardamos en una variable el target del boton para usarlos como id
         var targetTab = $('button.active').attr('data-bs-target');
         $.ajax({
-            url: './tabTextos.html',
+            url: '../pages/tabTextos.html',
             type: 'GET',
             success: function (data) {
-                $('#myTabContent').load('./tabTextos.html div' + targetTab);
+                $('#myTabContent').load('../pages/tabTextos.html div' + targetTab);
             }
         });
     });
@@ -65,7 +65,7 @@ $(function () {
         valor = this.value;
         $.ajax({
             type: 'GET',
-            url: './dataMovies.json',
+            url: '../dataMovies.json',
             dataType: 'json',
             contentType: 'application/json',
             cache: false,
@@ -101,7 +101,7 @@ $(function () {
         let cantClassNombre = cNombre.length;
         $.ajax({
             type: "POST",
-            url: "./formConfig.php",
+            url: "../pages/formConfig.php",
             data: dataString,
             success: function (data) {
                 if (cNombre == "form-control") {
@@ -403,7 +403,7 @@ $(function () {
     $(function () {
         function loadData(page) {
             $.ajax({
-                url: "./listar.php",
+                url: "../pages/listar.php",
                 type: "POST",
                 cache: false,
                 data: { page_no: page },
@@ -431,7 +431,7 @@ $(function () {
         var value = $("#provincia").val();
         $.ajax({
             type: "GET",
-            url: "./listaProvincias.php",
+            url: "../pages/listaProvincias.php",
             data: { inicial: value },
             success: (listaPro) => {
                 var list = JSON.parse(listaPro);
@@ -467,13 +467,13 @@ $(function () {
             ) {
                 $.ajax({
                     type: "POST",
-                    url: "./submitConfig.php",
+                    url: "../pages/submitConfig.php",
                     data: { nombre: NombreVal, empresa: EmpresaVal, telefono: TelefonoVal, mail: EmailVal, comentario: ComentarioVal },
                     success: function (exito) {
                         if (exito == 1) {
-                            location.href = "./ok.html?mensaje=salio_todo_piola_wachin";
+                            location.href = "../pages/ok.html?mensaje=salio_todo_piola_wachin";
                         } else {
-                            location.href = "./ok.html?mensaje=salio_todo_mal";
+                            location.href = "../pages/ok.html?mensaje=salio_todo_mal";
                         }
                     }
                 })

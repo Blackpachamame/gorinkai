@@ -1,24 +1,24 @@
 {
-  "name": "pwa-tp1",
+  "name": "gorinkai",
   "version": "1.0.0",
-  "description": "Este repositorio contiene una pagina web creada a partir de las consignas del trabajo práctico 1 de Programación Wen Avanzada.",
+  "description": "Este repositorio contiene una pagina web creada a partir de las consignas de los tp 1 y 2 de Programación Wen Avanzada.",
   "main": "index.js",
   "dependencies": {
     "bootstrap": "^5.0.0-beta3"
   },
   "devDependencies": {},
   "scripts": {
-    "build": "purgecss --css css/custom.css --content *.html *js *php -o css/reducido.css"
+    "build": "purgecss --css css/custom.css --content pages/*.html js/*js pages/*php -o css/reducido.css"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Blackpachamame/pwa-tp1.git"
+    "url": "git+https://github.com/Blackpachamame/gorinkai.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Blackpachamame/pwa-tp1/issues"
+    "url": "https://github.com/Blackpachamame/gorinkai/issues"
   },
-  "homepage": "https://github.com/Blackpachamame/pwa-tp1#readme"
+  "homepage": "https://github.com/Blackpachamame/gorinkai#readme"
 }

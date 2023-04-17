@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <!-- Mi CSS Customizado -->
-    <link type="text/css" rel="stylesheet" href="css/reducido.css" />
-
+    <link type="text/css" rel="stylesheet" href="../css/reducido.css" />
     <!-- Título -->
-    <title>Lesiones</title>
+    <title>Técnicas</title>
 </head>
 
 <body>
@@ -69,10 +68,10 @@
                         <a class="nav-link" href="textos.html">Ejercicio 2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tecnicas.html">Ejercicio 3</a>
+                        <a class="nav-link active" aria-current="page" href="tecnicas.html">Ejercicio 3</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="lesiones.html">Ejercicio 4</a>
+                        <a class="nav-link" href="lesiones.html">Ejercicio 4</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="karate.html">Ejercicio 5</a>
@@ -89,85 +88,70 @@
     </section>
     <!-- Ejercicios -->
 
-    <!-- Formulario Ejercicio 4 -->
-    <section class="d-flex justify-content-center pt-3 pt-md-5 pb-3 pb-md-5">
-        <form id="formLesiones" class="border rounded p-4">
-            <div class="col-12 text-center">
-                <h2>Formulario</h2>
-            </div>
-            <!-- Nombre input -->
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="username" placeholder="Patricio" required>
-                <label for="username">Nombre</label>
-                <div id="result-username"></div>
-            </div>
-            <!-- Empresa input -->
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput1" placeholder="La Nonina" required>
-                <label for="floatingInput1">Empresa</label>
-            </div>
-            <!-- Teléfono input -->
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput2" placeholder="2995123123" required>
-                <label for="floatingInput2">Teléfono</label>
-            </div>
-            <!-- Email input -->
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput3" placeholder="name@example.com" required>
-                <label for="floatingInput3">Email</label>
-            </div>
-            <!-- Comentarios input -->
-            <div class="form-floating mb-3">
-                <textarea class="form-control" placeholder="Escribe tu comentario aquí"
-                    id="floatingTextarea"></textarea>
-                <label for="floatingTextarea">Comentarios</label>
-            </div>
-            <!-- Enviar button -->
-            <div class="d-grid gap-2 mt-4 mb-2">
-                <button class="btn btn-lg btn-dark" type="submit">Enviar</button>
-            </div>
-        </form>
-    </section>
-    <!-- Formulario Ejercicio 4 -->
-
-    <!-- Section Ejercicio 4 -->
+    <!-- Section Columnas -->
     <section class="pt-3 pt-md-5 pb-3 pb-md-5">
-        <div class="container lesiones">
-            <!-- Header -->
-            <div class="row justify-content-around">
-                <div class="m-1 col-lg fondo-header4 bordesEj4">
-                    <p class="h1 text-center text-md-start">Header</p>
+        <div class="container">
+            <h1>Técnicas</h1>
+            <h3>Correr una Maratón</h3>
+            <div class="row justify-content-between">
+                <!-- Div 1 -->
+                <div class="my-2 col-xl col-lg-4 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Utilidad</h5>
+                            <p class="card-text">A nivel físico, entrenarse para correr un maratón endurece el cuerpo,
+                                le
+                                hace más resistente, y el "fondo" que se adquiere es insuperable. Sin embargo, para un
+                                practicante de artes marciales, los mayores beneficios se consiguen a nivel mental.</p>
+                        </div>
+                        <div class="card-footer text-end"><a href="#" class="btn btn-dark">Ver más</a></div>
+                    </div>
                 </div>
-            </div>
-            <!-- Columnas -->
-            <div class="row justify-content-around">
-                <!-- Col 1 -->
-                <div class="alinearCols m-1 ms-lg-1 ms-md-0 col-lg col-md col-sm-12 fondo-c1 bordesEj4">
-                    <span class="display-1 text-start text-lg-center">1</span>
+                <!-- Div 2 -->
+                <div class="my-2 col-xl col-lg-4 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Problemas frecuentes</h5>
+                            <p class="card-text">Ciatica: compresión del nervio ciatico por el sobredesarrollo de los
+                                músculos de la espalda y glúteos. El primer síntoma son dolores en la parte baja de la
+                                espalda. Causa: mala postura al correr y sobretensión en musculos de espalda y gluteos.
+                            </p>
+                        </div>
+                        <div class="card-footer text-end"><a href="#" class="btn btn-dark">Ver más</a></div>
+                    </div>
                 </div>
-                <!-- Col 2 -->
-                <div class="alinearCols m-1 me-lg-1 me-md-0 col-lg col-md col-sm-12 fondo-c2 bordesEj4">
-                    <p class="display-1 text-center text-md-end text-lg-center">2</p>
+                <!-- Div 3 -->
+                <div class="my-2 col-xl col-lg-4 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Tener en cuenta</h5>
+                            <p class="card-text">En cuanto a la velocidad. Si solo te entrenas para carreras de fondo,
+                                es
+                                cierto que te harás ligeramente más lento, por el tipo de masa muscular que se
+                                desarrolla.
+                            </p>
+                        </div>
+                        <div class="card-footer text-end"><a href="#" class="btn btn-dark">Ver más</a></div>
+                    </div>
                 </div>
-                <!-- Col 3 -->
-                <div class="alinearCols m-1 col-lg col-md-12 col-sm-12 fondo-c3 bordesEj4">
-                    <p class="display-1 text-end text-md-center">3</p>
-                </div>
-            </div>
-            <!-- Footers -->
-            <div class="row justify-content-around">
-                <!-- Footer 1 -->
-                <div class="m-1 col-lg col-md-12 fondo-footer4 bordesEj4">
-                    <p class="h1 text-center text-lg-end">Footer 1</p>
-                </div>
-                <!-- Footer 2 -->
-                <div class="m-1 col-lg col-md-12 fondo-footer4 bordesEj4">
-                    <p class="h1 text-center text-lg-start">Footer 2</p>
+                <!-- Div 4 -->
+                <div class="my-2 col-xl col-lg-4 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Consejos</h5>
+                            <p class="card-text">Es muy importante usar el calzado adecuado. Actualmente se fabrican
+                                modelos
+                                especiales para corredores de fondo. Normalmente son caros, pero compensa (te lo juegas
+                                todo
+                                en el hecho de que tus pies soporten el esfuerzo. Si los pies fallan, despídete).</p>
+                        </div>
+                        <div class="card-footer text-end"><a href="#" class="btn btn-dark">Ver más</a></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Section Ejercicio 4 -->
+    <!-- Section Columnas -->
 
     <!-- Footer -->
     <footer class="bg-dark text-white">
@@ -175,7 +159,7 @@
             <div class="row align-items-center">
                 <div class="col">
                     <div>Sitio creado con <a href="https://getbootstrap.com/">Bootstrap</a> por <a
-                            href="http://www.gorinkai.com/">Xin Chu
+                            href="https://github.com/Blackpachamame">Xin Chu
                             Lin</a>.
                     </div>
                 </div>
@@ -196,7 +180,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- JS Métodos -->
-    <script src="js/metodos.js" type="text/javascript"></script>
+    <script src="../js/metodos.js" type="text/javascript"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
