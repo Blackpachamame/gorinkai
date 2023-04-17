@@ -1,10 +1,6 @@
 # PWA - Instalar Docker (Windows 10 - Home)
 
-> #### GoRinKai
->
-> Un Ser Humano debería ser capaz de cambiar un pañal, planear una invasión, despiezar un cerdo, ensamblar una barca, diseñar un edificio, escribir un soneto, hacer un balance, levantar una pared, expresarse en otro idioma, remendar un hueso roto, confortar a un moribundo, obedecer órdenes, dar órdenes, cooperar, actuar en solitario, resolver ecuaciones, analizar un nuevo problema, esparcir estiércol, manejar un ordenador, cocinar una comida sabrosa, sufrir con entereza, luchar eficientemente. La especialización es para los insectos.
->
-> By _Robert A. Heinlein_
+_Esta información es del 2021, por lo que puede estar desactualizada_
 
 ## Tabla de contenido
 
@@ -71,7 +67,7 @@ Para instalar Docker en Windows 10 en su versión Home debe seguir los siguiente
 
 Si llegaron hasta acá y ven que en Docker aparece un barquito con un fondo verdoso abajo a la izquierda significa que esta casi todo listo.
 
-Ahora solo queda ir a la configuración de <em>Docker >> Resources >> WSL Integration</em> y habilitar donde dice Ubuntu-20.04. Le dan a **Apply & Restart** y ya quedaría todo listo para empezar con Laravel.
+Ahora solo queda ir a la configuración de _Docker >> Resources >> WSL Integration_ y habilitar donde dice Ubuntu-20.04. Le dan a **Apply & Restart** y ya quedaría todo listo para empezar con Laravel.
 
 ### Recursos útiles
 
