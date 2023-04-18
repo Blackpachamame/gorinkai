@@ -35,6 +35,21 @@ a {
   }
 }
 
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+  font-weight: 700;
+}
+
 /** FOOTER **/
 footer {
   a {
@@ -341,8 +356,11 @@ footer {
 }
 
 /** NAV EJERCICIOS **/
-#ejercicios li.nav-item a:hover {
-  color: $success;
+#ejercicios li.nav-item a {
+  font-weight: 500;
+  &:hover {
+    color: $info;
+  }
 }
 
 /** PAGINATION **/
