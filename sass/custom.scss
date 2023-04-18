@@ -330,6 +330,16 @@ footer {
 }
 
 /** LISTA IMAGENES - MODAL **/
+button.listPelicula {
+  font-style: italic;
+  color: $secondary;
+  border: 0;
+  padding: 0;
+  &:hover {
+    color: $info;
+  }
+}
+
 .list-group-item {
   padding: 0.2rem 0rem;
   color: #fff;

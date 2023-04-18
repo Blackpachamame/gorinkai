@@ -10081,6 +10081,16 @@ footer a {
 }
 
 /** LISTA IMAGENES - MODAL **/
+button.listPelicula {
+  font-style: italic;
+  color: #90ee90;
+  border: 0;
+  padding: 0;
+}
+button.listPelicula:hover {
+  color: #cd853f;
+}
+
 .list-group-item {
   padding: 0.2rem 0rem;
   color: #fff;
