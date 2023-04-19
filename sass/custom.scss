@@ -3,9 +3,9 @@
 
 $font-family-sans-serif: "Fira Sans", sans-serif;
 
-$primary: #00ff00;
+$primary: #08b783;
 $secondary: #90ee90;
-$success: #40e0d0;
+$success: #caad29;
 $info: #cd853f;
 $warning: #4682b4;
 $dark: #0e0e0e;
@@ -122,9 +122,9 @@ footer {
 
 /* Defino los fondos */
 .fondo-header4 {
-  background-color: $primary;
+  background-color: #00ff00;
   @include media-breakpoint-down(lg) {
-    background-color: $success;
+    background-color: #40e0d0;
   }
   @include media-breakpoint-down(md) {
     background-color: $info;
@@ -152,14 +152,14 @@ footer {
     height: 280px;
   }
   @include media-breakpoint-down(md) {
-    background-color: $success;
+    background-color: #40e0d0;
     height: 140px;
   }
 }
 
 .fondo-c3 {
   @include media-breakpoint-down(lg) {
-    background-color: $primary;
+    background-color: #00ff00;
     height: 140px;
   }
   @include media-breakpoint-down(md) {
@@ -177,6 +177,14 @@ footer {
 /* Defino los bordes */
 .bordesEj5 {
   border: 3px solid #fff;
+}
+
+.bg-verde {
+  background-color: #00ff00;
+}
+
+.bg-celeste {
+  background-color: #40e0d0;
 }
 
 /* Defino un mixin con argumentos para establecer el alto y el centrado de cada col */
@@ -276,11 +284,11 @@ footer {
   border-bottom: 4px solid;
   border-image: linear-gradient(
     90deg,
-    rgba(155, 149, 255, 1) 0%,
-    rgba(0, 255, 175, 1) 25%,
-    rgba(255, 243, 95, 1) 50%,
-    rgba(156, 33, 255, 1) 75%,
-    rgba(0, 86, 255, 1) 100%
+    #198754 0%,
+    #08b783 25%,
+    #90ee90 50%,
+    #08b783 75%,
+    #198754 100%
   );
   border-image-slice: 1;
 }

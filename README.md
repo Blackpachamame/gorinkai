@@ -25,7 +25,7 @@ Estos practicos se realizaron usando como tematica un sitio web añejo llamado [
 
 ### Links
 
-- [URL del sitio en vivo](https://blackpachamame.github.io/gorinkai/)
+- [URL del sitio en vivo](https://blackpachamame.github.io/gorinkai/pages/)
 - [Customizar CSS con Sass y Reducir CSS con PurgeCSS](https://github.com/Blackpachamame/gorinkai/blob/main/README-TP1.md)
 - [Instalar Docker (Windows 10 - Home)](https://github.com/Blackpachamame/gorinkai/blob/main/Instalar-Docker.md)
 
@@ -33,9 +33,9 @@ Estos practicos se realizaron usando como tematica un sitio web añejo llamado [
 
 Estos son algunos textos que quería rescatar del sitio original traducidos por el mismo autor del sitio.
 
-- [El Arte de la Guerra - Sun Tzu](https://blackpachamame.github.io/gorinkai/sun-tzu.html)
-- [Tao Te Ching - Lao Tse](https://blackpachamame.github.io/gorinkai/lao-tse.html)
-- [El Libro de los Cinco Anillos - Miyamoto Musashi](https://blackpachamame.github.io/gorinkai/miyamoto-musashi.html)
+- [El Arte de la Guerra - Sun Tzu](https://blackpachamame.github.io/gorinkai/pages/sun-tzu.html)
+- [Tao Te Ching - Lao Tse](https://blackpachamame.github.io/gorinkai/pages/lao-tse.html)
+- [El Libro de los Cinco Anillos - Miyamoto Musashi](https://blackpachamame.github.io/gorinkai/pages/miyamoto-musashi.html)
 
 ## Mi Procedimiento
 
