@@ -1509,6 +1509,10 @@ textarea.form-control {
   border-color: #cd853f !important;
 }
 
+.border-warning {
+  border-color: #4682b4 !important;
+}
+
 .border-2 {
   border-width: 2px !important;
 }
@@ -1575,6 +1579,14 @@ textarea.form-control {
 .my-4 {
   margin-top: 1.5rem !important;
   margin-bottom: 1.5rem !important;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
 }
 
 .me-2 {
