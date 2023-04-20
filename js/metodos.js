@@ -489,28 +489,3 @@ $(function () {
         $('.toast').toast('show');
     });
 });
-
-
-/* --MIYAMOTO-- */
-
-// AJAX con GET
-
-// Traemos los textos desde introsMiyamoto.html y los mostramos en textos.html
-$(function () {
-    $('#introduccion').on('click', 'button.laIntro', function () {
-        //Agregamos o quitamos la clase active
-        $("button.laIntro").toggleClass("active");
-    });
-    // Decimos que la función se activa al hacer click en un boton dentro de "introduccion"
-
-    // Guardamos en una variable el target del boton para usarlos como id
-    var targetCollapsed = $("button.laIntro.active").attr('data-bs-target');
-    console.log(targetCollapsed);
-    $.ajax({
-        url: '../pages/introsMiyamoto.html',
-        type: 'GET',
-        success: function (data) {
-            $('#introduccionContent').load('../pages/introsMiyamoto.html div' + targetCollapsed);
-        }
-    });
-});
