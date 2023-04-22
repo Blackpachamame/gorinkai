@@ -371,6 +371,16 @@ output {
   display: inline-block;
 }
 
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.figure-caption {
+  font-size: 0.875em;
+  color: #6c757d;
+}
+
 .container,
 .container-lg {
   width: 100%;
@@ -691,6 +701,10 @@ textarea.form-control {
   border-color: #84dbc1;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(8, 183, 131, 0.25);
+}
+ .form-select[size]:not([size="1"]) {
+  padding-right: 0.75rem;
+  background-image: none;
 }
 .form-select:disabled {
   background-color: #e9ecef;
@@ -1613,6 +1627,14 @@ textarea.form-control {
   margin-bottom: 1.5rem !important;
 }
 
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.ms-3 {
+  margin-left: 1rem !important;
+}
+
 .p-3 {
   padding: 1rem !important;
 }
@@ -2172,4 +2194,14 @@ button.listPelicula:hover {
 #tabla .page-item.active .page-link {
   color: #90ee90;
   background-color: #0e0e0e;
+}
+
+.nota {
+  border: 4px double black;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.nota p {
+  font-size: 0.8rem;
+  margin-bottom: 0;
 }

@@ -10171,4 +10171,14 @@ button.listPelicula:hover {
 #tabla .page-item.active .page-link {
   color: #90ee90;
   background-color: #0e0e0e;
+}
+
+.nota {
+  border: 4px double black;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.nota p {
+  font-size: 0.8rem;
+  margin-bottom: 0;
 }/*# sourceMappingURL=custom.css.map */

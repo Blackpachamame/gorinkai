@@ -422,3 +422,13 @@ button.listPelicula {
   color: $secondary;
   background-color: $dark;
 }
+
+.nota {
+  border: 4px double black;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  & p {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+}
