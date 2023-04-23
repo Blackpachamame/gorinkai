@@ -59,7 +59,7 @@ _Solución:_ Esto fue porque no menciono el primer paso que era crear/iniciar el
 
 2. Creación de CSS customizados en la misma carpeta que mi SCSS. En este caso esto no es realmente un problema, pero es desorganizado y desprolijo.
 
-_Solución:_ Para solucionarlo tuve que modificar las configuraciones de formart del compilador de Sass (extensión en VSC: Live Sass Compiler) y modificar esta línea `"savePath": null` por `"savePath": "/css"`. Esto hace que al compilar mi scss lo haga dentro de una carpeta llamada css. Sin embargo, hay que tener en cuenta que para que funcione correctamente, tu proyecto en el área de trabajo de VSC debe ser el que esté por encima de todos (si es que tenes más proyectos), de otra forma te crea los archivos css en una carpeta dentro del proyecto que esté por encima de los demás.
+_Solución:_ Para solucionarlo tuve que modificar las configuraciones de formart del compilador de Sass (extensión en VSC: Live Sass Compiler) y modificar esta línea `"savePath": null` por `"savePath": "/css"`. Esto hace que al compilar mi scss lo haga dentro de una carpeta llamada css. Sin embargo, hay que tener en cuenta que para que funcione correctamente, tu proyecto en el área de trabajo de VSC debe ser el que esté por encima de todos (si es que tenés más proyectos), de otra forma te crea los archivos css en una carpeta dentro del proyecto que esté por encima de los demás.
 
 3. El CSS de Bootstrap pisaba las clases modificadas en mi propio CSS.
 

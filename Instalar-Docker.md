@@ -65,7 +65,7 @@ Para instalar Docker en Windows 10 en su versión Home debe seguir los siguiente
 
 ### Habilitar Ubuntu
 
-Si llegaron hasta acá y ven que en Docker aparece un barquito con un fondo verdoso abajo a la izquierda significa que esta casi todo listo.
+Si llegaron hasta acá y ven que en Docker aparece un barquito con un fondo verdoso abajo a la izquierda significa que está casi todo listo.
 
 Ahora solo queda ir a la configuración de _Docker >> Resources >> WSL Integration_ y habilitar donde dice Ubuntu-20.04. Le dan a **Apply & Restart** y ya quedaría todo listo para empezar con Laravel.
 

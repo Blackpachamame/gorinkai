@@ -16,7 +16,7 @@
 
 ## Descripción
 
-Estos practicos se realizaron usando como tematica un sitio web añejo llamado [Gorinkai](http://www.gorinkai.com/), creado por Antonio Rivas Gonzálvez. Dicho sitio está dedicado al estudio de la filosofía y el espíritu de las Artes Marciales, pero también se tratan aspectos técnicos, instructivos en general, o simples curiosidades. Todo tiene relación. Como dice en la frase de Heinlein al principio de esta página, una persona, como tal, ha de ser capaz de hacer muchas cosas.
+Estos prácticos se realizaron usando como temática un sitio web añejo llamado [Gorinkai](http://www.gorinkai.com/), creado por **Antonio Rivas Gonzálvez**. Dicho sitio está dedicado al estudio de la filosofía y el espíritu de las Artes Marciales, pero también se tratan aspectos técnicos, instructivos en general, o simples curiosidades. Todo tiene relación. Como dice en la frase de Heinlein al principio de esta página, una persona, como tal, ha de ser capaz de hacer muchas cosas.
 
 ### Objetivos
 
