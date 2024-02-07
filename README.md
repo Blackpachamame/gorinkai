@@ -35,7 +35,7 @@ Estos son algunos textos que quería rescatar del sitio original traducidos por 
 
 - [El Arte de la Guerra - Sun Tzu](https://blackpachamame.github.io/gorinkai/pages/sun-tzu.html)
 - [Tao Te Ching - Lao Tse](https://blackpachamame.github.io/gorinkai/pages/lao-tse.html)
-- [El Libro de los Cinco Anillos - Miyamoto Musashi](https://blackpachamame.github.io/gorinkai/pages/miyamoto-musashi.html)
+- [El Libro de los Cinco Anillos - Miyamoto Musashi](https://blackpachamame.github.io/gorinkai/pages/miyamoto.html)
 
 ## Mi Procedimiento
 
